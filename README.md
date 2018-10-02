@@ -16,10 +16,16 @@ yarn
 ## How to participate
 
 1. Find an issue that is **not assigned** yet
-2. Implement it so that it passes all the tests (check with `yarn test`)
+2. Implement it so that it passes all the tests (check with `yarn test src/theFunction.test.js`)
 3. Add a test case for a new function. You can use `yarn generate` to create the two new files.
 4. Create your **Pull Request**
 5. Create an issue for your new feature
+
+## Some rules & directions
+
+- No libraries of any kind, just plain old vanilla js :)
+- If you got assigned an issue and don't have time to do it, please say it so we can release it for someone else.
+- Make sure your implementation passes the previous tests before opening a Pull Request.
 
 ## Files
 
