@@ -9,7 +9,7 @@ describe('uniq', () => {
 
   it('Returns array with unique values', () => {
     var array = [1, 2, 3, 4, 5, 6, 6];
-    var array = [1, 2, 3, 4, 5, 6];
+    var result = [1, 2, 3, 4, 5, 6];
     expect(uniq(array)).toEqual(result);
   });
 })
