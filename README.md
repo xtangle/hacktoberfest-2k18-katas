@@ -5,10 +5,9 @@ public repository.
 
 ## Installation
 
-```bash
-# Clone repo
-git clone git@github.com:rgehan/hacktoberfest-2k18-katas.git
+You first need to fork the repository, then go in the directory and run:
 
+```bash
 # Install the dependencies
 yarn
 ```
