@@ -1,10 +1,23 @@
 #! /usr/bin/env node
 
 const { exec, spawnSync } = require('child_process');
+const { chain, filter } = require('lodash');
 
 function seeChangedFiles(cb) {
-  exec('git diff --name-only master', (err, out) => {
-    const files = out.split('\n');
+  exec('git diff --name-status master', (err, out) => {
+    const files = chain(out)
+      .split('\n')
+      .filter()
+      .map(s => s.split('\t'))
+      .map(([status, filename]) => ({
+        filename,
+        isAdded: status === 'A',
+        isModified: status === 'M',
+        isTest: filename.indexOf('.test.js') !== -1,
+      }))
+      .filter(({ filename }) => filename.startsWith('src/'))
+      .value();
+
     cb(files);
   });
 }
@@ -15,27 +28,32 @@ function runCommand(command, argv) {
 }
 
 seeChangedFiles(files => {
-  const testFiles = files.filter(name => name.indexOf('.test.js') !== -1);
-  const implementationFiles = files.filter(
-    name => name.indexOf('.test.js') === -1
-  );
+  const modifiedImplemFiles = filter(files, {
+    isModified: true,
+    isTest: false,
+  });
 
   // For a PR to be valid, it needs:
   // - A fixed implementation file
   // - A new test case
   // - An empty new implementation file
-  if (testFiles.length !== 1 || implementationFiles.length !== 2) {
-    console.log('This PR has more changed files than necessary!');
+  if (modifiedImplemFiles.length !== 1) {
+    const modifiedFilesList = chain(modifiedImplemFiles)
+      .map('filename')
+      .join('\n -')
+      .value();
+
+    console.log(
+      `This PR has changed more implementation files than necessary.` +
+        `You should only change one per PR!\n` +
+        `You changed:\n${modifiedFilesList}`
+    );
     process.exit(1);
     return;
   }
 
   // Find the file to test
-  const testFilePrefix = testFiles[0].split('.')[0];
-  const implementationFileToTest = implementationFiles.find(
-    name => !name.startsWith(testFilePrefix)
-  );
-  const testFileToRun = implementationFileToTest.replace('.', '.test.');
+  const testFileToRun = modifiedImplemFiles[0].filename.replace('.', '.test.');
 
   // Launch the tests
   console.log('Launching test: ', `jest ${testFileToRun}`);
