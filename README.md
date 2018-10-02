@@ -49,5 +49,5 @@ describe('${name}', () => {
 })
 ```
 
-You only need to update test test file, the actual implementation will be done
+You only need to update the test file, the actual implementation will be done
 by someone else!
