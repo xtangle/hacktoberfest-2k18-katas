@@ -1,5 +1,5 @@
 export const countOdd = values => {
-  // TO IMPLEMENT IN ANOTHER PR
+  
   if(!values){
     return 0;
   }
