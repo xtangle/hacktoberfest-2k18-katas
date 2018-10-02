@@ -1,7 +1,7 @@
 ### Details
-**Link to the issue:** <link to the issue>
-**Name of the function you implemented**: <name of the function>
-**Name of the function you added test cases for**: <name of the new function>
+**Link to the issue:** *link to the issue*
+**Name of the function you implemented**: *name of the function*
+**Name of the function you added test cases for**: *name of the new function*
 
 ### Checklist
 - [ ] I didn't modify any test case
