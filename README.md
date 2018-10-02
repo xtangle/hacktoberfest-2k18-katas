@@ -25,6 +25,9 @@ yarn
 - No libraries of any kind, just plain old vanilla js :)
 - If you got assigned an issue and don't have time to do it, please say it so we can release it for someone else.
 - Make sure your implementation passes the previous tests before opening a Pull Request.
+- We'll de-assign you from an issue if:
+  - You haven't opened a PR in a few hours
+  - If you've opened one but not updated it in a long time
 
 ## Files
 
