@@ -3,6 +3,16 @@
 The point of this repository is to allow anyone to start contributing on a
 public repository.
 
+## Installation
+
+```bash
+# Clone repo
+git clone git@github.com:rgehan/hacktoberfest-2k18-katas.git
+
+# Install the dependencies
+yarn
+```
+
 ## How to participate
 
 1. Find an issue that is **not assigned** yet
