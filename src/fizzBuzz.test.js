@@ -2,11 +2,11 @@ import { fizzBuzz } from './fizzBuzz'
 
 describe('fizzBuzz', () => {
   it('All numbers dividable by 3 should be changed to "fizz"', () => {
-    expect(fizzBuzz([1, 2, 3])).toBeTruthy([1, 2, 'fizz'])
+    expect(fizzBuzz([1, 2, 3])).toEqual([1, 2, 'fizz'])
   })
 
   it('All numbers dividable by 5 should be changed to "buzz"', () => {
-    expect(fizzBuzz([1, 2, 3, 4, 5, 6])).toBeTruthy([
+    expect(fizzBuzz([1, 2, 3, 4, 5, 6])).toEqual([
       1,
       2,
       'fizz',
@@ -17,7 +17,7 @@ describe('fizzBuzz', () => {
   })
 
   it('All numbers dividable by both 3 and 5 should be changed to "fizzbuzz"', () => {
-    expect(fizzBuzz([3, 4, 5, 6, 15])).toBeTruthy([
+    expect(fizzBuzz([3, 4, 5, 6, 15])).toEqual([
       'fizz',
       4,
       'buzz',
