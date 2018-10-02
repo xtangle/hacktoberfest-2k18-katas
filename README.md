@@ -27,7 +27,7 @@ When using `yarn generate`, two files are created:
 **theFunction.js**:
 
 ```js
-export const ${name} = () => {
+export const theFunction = () => {
   // TO IMPLEMENT IN ANOTHER PR
 };
 ```
@@ -35,9 +35,9 @@ export const ${name} = () => {
 **theFunction.test.js**:
 
 ```js
-import { ${name} } from './${name}';
+import { theFunction } from './theFunction';
 
-describe('${name}', () => {
+describe('theFunction', () => {
   it('does something', () => {
     expect(true).toBeTruthy(); // TODO Your test instead
   });
