@@ -1,3 +1,1 @@
-export const uniq = () => {
-  // TO IMPLEMENT IN ANOTHER PR
-};
+export const uniq = (xs) => [...new Set(xs)]
