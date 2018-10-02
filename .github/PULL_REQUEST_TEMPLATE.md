@@ -12,4 +12,5 @@
 - [ ] I have implemented the function and all its tests pass  :white_check_mark:
 - [ ] I have added a new test case for someone to implement  :new:
 - [ ] I have created an issue for my new test case  :speak_no_evil:
+- [ ] I've :star: the repository (or not, all up to you)
 - [ ] And more importantly, I've had fun! :beer:
