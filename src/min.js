@@ -7,3 +7,4 @@ export const min = values => {
   }
   return Math.min(...values);
 };
+
