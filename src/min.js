@@ -3,7 +3,7 @@ export const min = values => {
     return null;
   }
   if (!values.length) {
-    return 0;
+    return null;
   }
   return Math.min(...values);
 };
