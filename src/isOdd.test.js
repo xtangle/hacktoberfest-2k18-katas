@@ -1,6 +1,6 @@
 import { isOdd } from './isOdd';
 
-describe('isEven', () => {
+describe('isOdd', () => {
   it('returns true when a number is odd', () => {
     expect(isOdd(3)).toBeTruthy();
   });
