@@ -1,3 +1,6 @@
-export const max = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const max = values => {
+  if (!Array.isArray(values) || !values.length) {
+    return null;
+  }
+  return Math.max(...values);
 };
