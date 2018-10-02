@@ -1,7 +1,1 @@
-export const multiply = val => {
-  //
-  if (!val.length) {
-    return 1;
-  }
-  return val.reduce((a, b) => a * b);
-};
+export const multiply = numbers => numbers.reduce((x, y) => x * y, 1)

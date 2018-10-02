@@ -17,7 +17,7 @@ function runCommand(command, argv) {
 seeChangedFiles(files => {
   const testFiles = files.filter(name => name.indexOf('.test.js') !== -1);
   const implementationFiles = files.filter(
-    name => name.index('.test.js') === -1
+    name => name.indexOf('.test.js') === -1
   );
 
   // For a PR to be valid, it needs:
@@ -30,8 +30,18 @@ seeChangedFiles(files => {
     return;
   }
 
-  const testFile = testFiles[0];
-  const status = runCommand('jest', [testFile]);
+  // Find the file to test
+  const testFilePrefix = testFiles[0].split('.')[0];
+  const implementationFileToTest = implementationFiles.find(
+    name => !name.startsWith(testFilePrefix)
+  );
+  const testFileToRun = implementationFileToTest.replace('.', '.test.');
 
+  // Launch the tests
+  console.log('Launching test: ', `jest ${testFileToRun}`);
+  const status = runCommand('node_modules/.bin/jest', [testFileToRun]);
+
+  // Exit with the same status as the tests
+  console.log('Exiting with status: ' + status);
   process.exit(status);
 });

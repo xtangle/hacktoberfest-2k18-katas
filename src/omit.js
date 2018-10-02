@@ -1,3 +1,6 @@
-export const omit = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const omit = (obj, properties = []) => {
+  return properties.reduce((newObj, property) => {
+    delete newObj[property];
+    return newObj;
+  } , obj)
 };
