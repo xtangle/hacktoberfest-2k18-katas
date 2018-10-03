@@ -10,14 +10,14 @@ import { pillars } from "./pillars";
 // Calculate the distance between the first and the last pillar
 // in centimeters (without the width of the first and last pillar).
 
-describe("Pillars tests", function() {
-  it("Testing for number of pillars: 1, distance: 10 m and width: 10 cm", function() {
-    expect(pillars(1, 10, 10), 0);
+describe("Pillars tests", function () {
+  it("Testing for number of pillars: 1, distance: 10 m and width: 10 cm", function () {
+    expect(pillars(1, 10, 10)).toEqual(0);
   });
-  it("Testing for number of pillars: 2, distance: 20 m and width: 25 cm", function() {
-    expect(pillars(2, 20, 25), 2000);
+  it("Testing for number of pillars: 2, distance: 20 m and width: 25 cm", function () {
+    expect(pillars(2, 20, 25)).toEqual(2000);
   });
-  it("Testing for number of pillars: 11, distance: 15 m and width: 30 cm", function() {
-    expect(pillars(11, 15, 30), 15270);
+  it("Testing for number of pillars: 11, distance: 15 m and width: 30 cm", function () {
+    expect(pillars(11, 15, 30)).toEqual(15270);
   });
 });
