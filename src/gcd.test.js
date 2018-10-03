@@ -6,7 +6,7 @@ describe('gcd', () => {
   });
 
   it('does something else', () => {
-    expect(gcd(5.9)).toEqual(1); 
+    expect(gcd(5,9)).toEqual(1); 
   });
   it('does something else', () => {
     expect(gcd(1709,1729)).toEqual(1); 
