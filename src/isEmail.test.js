@@ -1,11 +1,11 @@
 import { isEmail } from './isEmail';
 
 describe('isEmail', () => {
-  it('does something', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('test@gmail.com is valid email', () => {
+    expect(isEmail("test@gmail.com")).toBeTruthy(); // TODO Your test instead
   });
 
-  it('does something else', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('test@gmailm is not valid email', () => {
+    expect(isEmail("test@gmail")).toBeTruthy(); // TODO Your test instead
   });
 })
