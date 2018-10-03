@@ -2,11 +2,11 @@ import { nextPowerOfTwo } from './nextPowerOfTwo';
 
 describe('nextPowerOfTwo', () => {
 
-  it('2 is nextPowerOfTwo for 2', () => {
+  it('2 is nextPowerOfTwo for -20', () => {
     expect(nextPowerOfTwo(-20)).toEqual(0);
   });
 
-  it('2 is nextPowerOfTwo for 2', () => {
+  it('2 is nextPowerOfTwo for 0', () => {
     expect(nextPowerOfTwo(0)).toEqual(0);
   });
 
