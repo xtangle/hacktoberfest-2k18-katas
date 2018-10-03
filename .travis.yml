@@ -7,3 +7,5 @@ jobs:
   include:
     - stage: test
       script: ./scripts/test.js
+notifications:
+  webhooks: https://www.travisbuddy.com/
