@@ -1,4 +1,4 @@
 export const isPowerOfTwo = x => {
-  // return true if x is a power of 2 else false
-  
+  if( x == 1) return true
+  return x % 2 == 0 ? isPowerOfTwo(x/2) : false
 };
