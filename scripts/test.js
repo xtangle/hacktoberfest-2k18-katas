@@ -28,38 +28,76 @@ function runCommand(command, argv) {
 }
 
 seeChangedFiles(files => {
-  const modifiedImplemFiles = filter(files, {
-    isModified: true,
-    isTest: false,
-  });
+  const modifiedImplems = filter(files, { isModified: true, isTest: false });
+  const addedImplems = filter(files, { isAdded: true, isTest: false });
+  const addedTests = filter(files, { isAdded: true, isTest: true });
 
-  // For a PR to be valid, it needs:
-  // - A fixed implementation file
-  // - A new test case
-  // - An empty new implementation file
-  if (modifiedImplemFiles.length !== 1) {
-    const modifiedFilesList = chain(modifiedImplemFiles)
-      .map('filename')
-      .join('\n -')
-      .value();
+  let shoudExitWithFailure = false;
 
-    console.log(
-      `This PR has changed more implementation files than necessary.` +
-        `You should only change one per PR!\n` +
-        `You changed:\n${modifiedFilesList}`
-    );
+  // Not enough changes in this PR...
+  if (
+    modifiedImplems.length !== 1 ||
+    addedImplems.length !== 1 ||
+    addedTests.length !== 1
+  ) {
+    console.error(`\
+###################################
+##             ERROR             ##
+###################################
+
+For a Pull Request to be considered, it needs at least 3 things:
+- A modified file, containing your implementation of the Kata.
+- A new file containing the tests for your new Kata idea.
+- An empty file, where someone will implement your new Kata idea.
+
+Yours only has:
+- ${modifiedImplems.length} modified implementations (needs 1)
+- ${addedImplems.length} new implementations (needs 1)
+- ${addedTests.length} new test file (needs 1)
+`);
+
     process.exit(1);
     return;
   }
 
+  // More changes than necessary
+  if (files.length !== 3) {
+    // Even though the tests might not fail, we want to indicate to the
+    // user that something's wrong
+    shoudExitWithFailure = true;
+
+    console.error(`\
+###################################
+##           WARNING             ##
+###################################
+
+It looks like you have changed more than 3 files in this PR. Could you
+check that you only committed relevant files. For example, any file
+outputted by your IDE, or by a build tool you use is not relevant. On
+the other hand, if you fixed a test case, then it's ok.
+
+Here are the files that you changed:
+${files
+      .map(f => `- ${f.filename} ${f.isAdded ? '(NEW)' : '(MODIFIED)'}`)
+      .join('\n')}
+`);
+  }
+
   // Find the file to test
-  const testFileToRun = modifiedImplemFiles[0].filename.replace('.', '.test.');
+  const testFileToRun = modifiedImplems[0].filename.replace('.', '.test.');
 
   // Launch the tests
-  console.log('Launching test: ', `jest ${testFileToRun}`);
+  console.log(`\
+###################################
+##       RUNNING TEST FILE       ##
+###################################
+
+Running command: "jest ${testFileToRun}"
+`);
   const status = runCommand('node_modules/.bin/jest', [testFileToRun]);
 
   // Exit with the same status as the tests
-  console.log('Exiting with status: ' + status);
-  process.exit(status);
+  const actualStatus = shoudExitWithFailure ? 1 : status;
+  console.log('Exiting with status: ' + actualStatus);
+  process.exit(actualStatus);
 });
