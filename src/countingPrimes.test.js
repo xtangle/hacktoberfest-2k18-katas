@@ -6,10 +6,10 @@ describe('countingPrimes', () => {
   });
 
   it('should find all primes in an array', () => {
-    expect([]).toBe(0);
+    expect(countingPrimes([])).toBe(0);
   });
 
   it('should receive always an array', () => {
-    expect(2).toBeFalsy();
+    expect(countingPrimes(2)).toBeFalsy();
   });
 })
