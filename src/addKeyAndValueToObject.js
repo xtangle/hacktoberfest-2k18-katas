@@ -1,3 +1,4 @@
-export const addKeyAndValueToObject = () => {
-    // TO IMPLEMENT IN ANOTHER PR
-  };
+export const addKeyAndValueToObject = (obj, key, value) => {
+    obj[key] = value;
+    return obj;
+};
