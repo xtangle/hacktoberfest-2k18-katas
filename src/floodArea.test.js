@@ -25,8 +25,8 @@ describe('floodArea', () => {
     // prettier-ignore
     const area = [
       '+--------+',
-      '|        |',
-      '|        |',
+      '|   |    |',
+      '|   |    |',
       '+--------+',
     ];
 
