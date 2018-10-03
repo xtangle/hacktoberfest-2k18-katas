@@ -1,5 +1,4 @@
 export const product = (arr) => {
-  // TO IMPLEMENT IN ANOTHER PR
   if (arr.length === 0) {
     return 0;
   }
