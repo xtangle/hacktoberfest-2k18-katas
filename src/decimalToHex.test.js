@@ -8,7 +8,7 @@ describe('decimalToHex', () => {
     expect(decimalToHex("hi")).toBe(null)
   });
   it('returns 0 if decimal number is 0', () => {
-    expect(decimalToHex(0)).toBe(0);
+    expect(decimalToHex(0)).toBe('0');
   });
   it('returns null if parameter does not exist', () => {
     expect(decimalToHex()).toBe(null);
