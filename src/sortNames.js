@@ -1,3 +1,3 @@
-export const sortNames = () => {
-    // TO IMPLEMENT IN ANOTHER PR
-  };
+export const sortNames = names => {
+  return names.sort();
+};
