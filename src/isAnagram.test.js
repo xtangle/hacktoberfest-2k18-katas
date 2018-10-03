@@ -14,6 +14,6 @@ describe('isAnagram', () => {
   });
   
   it('buster and bus are not anagrams', () => {
-    expect(isAnagram("buster", "bus")).toBeTruthy();
+    expect(isAnagram("buster", "bus")).toBeFalsy();
   });
 })
