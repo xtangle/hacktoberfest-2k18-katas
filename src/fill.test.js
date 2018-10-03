@@ -18,7 +18,7 @@ describe('fill', () => {
   });
 
   it('Takes start and end args and fills correctly', () => {
-    expect(fill([4, 6, 8, 10], '*', 1, 3).toEqual([4, '*', '*', 10]);
+    expect(fill([4, 6, 8, 10], '*', 1, 3)).toEqual([4, '*', '*', 10]);
   });
 
 })
