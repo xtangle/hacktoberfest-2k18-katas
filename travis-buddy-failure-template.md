@@ -15,18 +15,12 @@ please respond to this comment.
 
 {{#scripts}}
 
-<details>
-  <summary>
-    <strong>
-     {{command}}
-    </strong>
-  </summary>
+**{{command}}**
 
 ```
 {{&contents}}
 ```
 
-</details>
 <br />
 {{/scripts}}
 {{/jobs}}
