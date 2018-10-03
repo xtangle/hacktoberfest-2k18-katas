@@ -1,4 +1,4 @@
-export const isOdd = () => {
-    // TO IMPLEMENT IN ANOTHER PR   
+export const isOdd = value => {
+    return value % 2;
 };
- 
+
