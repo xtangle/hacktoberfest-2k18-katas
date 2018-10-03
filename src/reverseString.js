@@ -1,3 +1,7 @@
-export const reverseString = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const reverseString = (string) => {
+  if(typeof string !== 'string') {
+    return null;
+  }
+
+  return string.split('').reverse().join('');
 };
