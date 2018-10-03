@@ -1,3 +1,3 @@
-export const isEmail = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const isEmail = (text) => {
+  return text.match(/\S+@\S+\.\S+/);
 };
