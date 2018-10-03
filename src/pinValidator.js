@@ -1,6 +1,21 @@
-export const pinValidator = () => {
-  // Implement pinValidator function which will check given array of values
-  // To pass all tests function should return true if length is equal to 4 and contains only numeric values
-  // Return false if array contains decimal or invalid characters or length not match 4
-  // Return null if no values or empty array
+export const pinValidator = (arr) => {
+
+  let count = 0;
+
+  if(arr == undefined || arr == null || arr.length <= 0)
+    return null;
+  
+  if(arr.length > 4)
+    return false;
+  
+  let a = arr.filter((val, index, arr) => {
+    if(!Number.isNaN(val) && Number.isInteger(val)){
+      count++;   
+    }
+  });
+
+  if(count == 4 && arr.length == 4)
+    return true;
+  
+  return false;
 };
