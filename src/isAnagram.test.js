@@ -1,19 +1,19 @@
 import { isAnagram } from './isAnagram';
 
 describe('isAnagram', () => {
-  it('does something', () => {
+  it('cat and act are anagrams', () => {
     expect(isAnagran("cat", "act")).toBeTruthy(); // TODO Your test instead
   });
 
-  it('does something else', () => {
+  it('owl and low are anagrams', () => {
     expect(isAnagran("owl", "low")).toBeTruthy(); // TODO Your test instead
   });
   
-  it('does something else', () => {
+  it('triangle and triangle are anagrams', () => {
     expect(isAnagran("triangle", "triangle")).toBeTruthy(); // TODO Your test instead
   });
   
-  it('does something else', () => {
+  it('buster and bus are not anagrams', () => {
     expect(isAnagran("buster", "bus")).toBeTruthy(); // TODO Your test instead
   });
 })
