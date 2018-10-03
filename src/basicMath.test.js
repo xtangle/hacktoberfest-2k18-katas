@@ -9,12 +9,12 @@ describe("BasicMath", () => {
     expect((basicOp("+", 4, 7), 11));
   });
   it("should substract two numbers", () => {
-    expect(basicOp("-", 15, 18), -3);
+    expect((basicOp("-", 15, 18), -3));
   });
   it("should multiply two numbers properly", () => {
-    expect(basicOp("*", 5, 5), 25);
+    expect((basicOp("*", 5, 5), 25));
   });
   it("should divide two numbers properly", () => {
-    expect(basicOp("/", 49, 7), 7);
+    expect((basicOp("/", 49, 7), 7));
   });
 });
