@@ -2,18 +2,18 @@ import { isCorrectBracketSequence } from './isCorrectBracketSequence';
 
 describe('isCorrectBracketSequence', () => {
     it('return true when a string has CBS (0)', () => {
-        isCorrectBracketSequence('()(())').toBeTruthy();
+        expect(isCorrectBracketSequence('()(())')).toBeTruthy();
     });
     it('return true when a string has CBS (1)', () => {
-        isCorrectBracketSequence('Hello (World)').toBeTruthy();
+        expect(isCorrectBracketSequence('Hello (World)')).toBeTruthy();
     });
     it('return true when a string has CBS (2)', () => {
-        isCorrectBracketSequence('2 + (117 * (345/52)) + [data.value]/{something {master: {Bool: true, Array: [array]} }}').toBeTruthy();
+        expect(isCorrectBracketSequence('2 + (117 * (345/52)) + [data.value]/{something {master: {Bool: true, Array: [array]} }}')).toBeTruthy();
     });
     it('return false when a string has CBS (0)', () => {
-        isCorrectBracketSequence('[]]').toBeFalsy();
+        expect(isCorrectBracketSequence('[]]')).toBeFalsy();
     });
     it('return false when a string has CBS (1)', () => {
-        isCorrectBracketSequence('[Hello](0))(])]{World}}').toBeFalsy();
+        expect(isCorrectBracketSequence('[Hello](0))(])]{World}}')).toBeFalsy();
     });
 })
