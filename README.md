@@ -25,6 +25,7 @@ yarn
 - Each PR should contain **exactly 3 files**: your implementation, and 2 files for a new kata. All pull requests that do not follow this rule will be closed **immediately**.
 - If you take too much time to complete an issue/PR, it will be closed and de-assigned from you
 - Make sure your implementation passes the previous tests before opening a Pull Request.
+- Do not use any npm package, it's no fun
 
 ## Files
 
