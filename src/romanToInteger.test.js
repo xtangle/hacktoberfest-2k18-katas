@@ -14,6 +14,6 @@ describe('romanToInteger', () => {
   });
 
   it('should convert MMMCMXCIX to 3999', () => {
-    expect(romanToInteger(MMMCMXCIX)).toBe(3999);
+    expect(romanToInteger("MMMCMXCIX")).toBe(3999);
   });
 })
