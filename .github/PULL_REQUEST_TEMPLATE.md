@@ -1,11 +1,11 @@
-### Details
+## Details
 **Link to the issue:** *link to the issue*
 
 **Name of the function you implemented**: *name of the function*
 
 **Name of the function you added test cases for**: *name of the new function*
 
-### Checklist
+## Checklist (won't be merged if they are not all ticked)
 - [ ] I have asked for this issue, and was assigned it
 - [ ] I have properly filled the "Details" section above  :arrow_up:
 - [ ] I didn't modify any test case  :red_circle:
