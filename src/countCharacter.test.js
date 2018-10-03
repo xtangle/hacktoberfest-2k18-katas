@@ -11,6 +11,6 @@ describe('countCharacter', () => {
   });
 
   it('returns the number of occurrences of a given char in a String', () => {
-    expect(repeat("test", "t")).toBe(2);
+    expect(countCharacter("test", "t")).toBe(2);
   });
 })
