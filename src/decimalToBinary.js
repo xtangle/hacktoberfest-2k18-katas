@@ -1,3 +1,4 @@
-export const decimalToBinary = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const decimalToBinary = (decimal) => {
+  const binaryString = decimal.toString(2);
+  return binaryString;
 };
