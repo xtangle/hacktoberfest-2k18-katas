@@ -20,14 +20,11 @@ yarn
 4. Create your **Pull Request**
 5. Create an issue for your new feature
 
-## Some rules & directions
+## Rules
 
-- No libraries of any kind, just plain old vanilla js :)
-- If you got assigned an issue and don't have time to do it, please say it so we can release it for someone else.
+- Each PR should contain **exactly 3 files**: your implementation, and 2 files for a new kata. All pull requests that do not follow this rule will be closed **immediately**.
+- If you take too much time to complete an issue/PR, it will be closed and de-assigned from you
 - Make sure your implementation passes the previous tests before opening a Pull Request.
-- We'll de-assign you from an issue if:
-  - You haven't opened a PR in a few hours
-  - If you've opened one but not updated it in a long time
 
 ## Files
 
