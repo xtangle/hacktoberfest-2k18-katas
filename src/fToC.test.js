@@ -1,7 +1,5 @@
 import { fToC } from './fToC';
 
-// °C = 5/9 x (°F -32)
-
 describe('fToC', () => {
   it('returns 0 degrees in C', () => {
     expect(fToC(32)).toEqual(0);
