@@ -10,7 +10,7 @@ describe('sumOfPairs', () => {
   });
 
   it('goes from 5 to 15', () => {
-    expect(sumOfPairs([5,15])).toEqual(60);
+    expect(sumOfPairs([5,15])).toEqual(50);
   });
 
   it('goes from 90 to 160', () => {
