@@ -10,10 +10,10 @@ describe('toPigLatin', () => {
   });
 
   it('handles for consonant clusters', () => {
-    expect('this rocks').toBe('isthay ocksray');
+    expect(toPigLatin('this rocks')).toBe('isthay ocksray');
   });
 
   it('handles for words beginning with a vowel', () => {
-    expect('one last test').toBe('oneway astlay esttay');
+    expect(toPigLatin('one last test')).toBe('oneway astlay esttay');
   });
 })
