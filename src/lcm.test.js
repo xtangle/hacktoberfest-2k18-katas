@@ -1,6 +1,9 @@
 import { lcm } from './lcm';
 
 describe('lcm', () => {
+  it('calculates least common multiple to be 15', () => {
+    expect(lcm(5,3)).toEqual(15); 
+  });
   it('calculates least common multiple to be 1000', () => {
     expect(lcm(5,1000)).toEqual(1000); 
   });
