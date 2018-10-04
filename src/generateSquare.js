@@ -4,13 +4,17 @@ export const generateSquare = (sideLength) => {
       return [];
     case 1:
       return ['*'];
-    default:
-      var square = [];
+    default: {
+      const square = [];
       square.push('*'.repeat(sideLength));
-      for (var i = 2; i < sideLength; i++) {
+
+      for (let i = 2; i < sideLength; i++) {
         square.push('*' + ' '.repeat(sideLength - 2) + '*');
-      };
+      }
+
       square.push('*'.repeat(sideLength));
+
       return square;
-  }; 
+    }
+  } 
 };
