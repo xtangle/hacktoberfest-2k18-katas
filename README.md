@@ -15,7 +15,7 @@ yarn
 ## How to participate
 
 1. Find an issue that is **not assigned** yet
-2. Implement it so that it passes all the tests (check with `yarn test src/theFunction.test.js`)
+2. Implement it so that it passes both the linting and the tests (check with `yarn lint src/theFunction.js src/theNewKata.test.js` and `yarn test src/theFunction.test.js`)
 3. Add a test case for a new function. You can use `yarn generate` to create the two new files.
 4. Create your **Pull Request**
 5. Create an issue for your new feature
