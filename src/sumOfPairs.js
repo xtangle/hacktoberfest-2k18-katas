@@ -1,7 +1,10 @@
 export const sumOfPairs = (arr) => {
-  /**
-   * Write a program that sum all the pairs from a starting number to an ending number 
-   * including starting and ending numbers.
-   * For example: from 0 to 6 ==> 0+2+4+6
-   */
+  const start = arr[0] + arr[0] % 2;
+  const end = arr[1] - arr[1] % 2;
+  const length = (end - start) / 2 + 1;
+  if (length % 2) {
+    return (start + end) * Math.floor(length / 2) + (start + end) / 2;
+  } else {
+    return (start + end) * length / 2;
+  }
 };

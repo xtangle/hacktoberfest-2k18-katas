@@ -21,7 +21,7 @@ describe('tokenizer', () => {
       { type: 'number', lexeme: '10', literal: 5 },
     ];
 
-    expect(tokenize(expression)).toEqual(tokens);
+    expect(tokenizer(expression)).toEqual(tokens);
   });
 
   it('tokenizes a simple arithmetic expression ignoring whitespaces', () => {
@@ -34,7 +34,7 @@ describe('tokenizer', () => {
       { type: 'number', lexeme: '10', literal: 5 },
     ];
 
-    expect(tokenize(expression)).toEqual(tokens);
+    expect(tokenizer(expression)).toEqual(tokens);
   });
 
   it('tokenizes a small snippet of javascript code', () => {
@@ -47,7 +47,7 @@ describe('tokenizer', () => {
       { type: 'semicolon', lexeme: ';', literal: null },
     ];
 
-    expect(tokenize(expression)).toEqual(tokens);
+    expect(tokenizer(expression)).toEqual(tokens);
   });
 
   it('tokenizes another small snippet of javascript code', () => {
@@ -60,6 +60,6 @@ describe('tokenizer', () => {
       { type: 'semicolon', lexeme: ';', literal: null },
     ];
 
-    expect(tokenize(expression)).toEqual(tokens);
+    expect(tokenizer(expression)).toEqual(tokens);
   });
 });
