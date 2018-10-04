@@ -1,7 +1,7 @@
 import { range } from './range';
 
 describe('range', () => {
-  it('returns the range of posative numbers', () => {
+  it('returns the range of positive numbers', () => {
     expect(range([3, 5, 4, 4, 1, 1, 2, 3])).toEqual([1, 5])
   });
 
