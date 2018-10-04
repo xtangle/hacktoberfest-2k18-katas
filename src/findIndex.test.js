@@ -10,10 +10,10 @@ const isPair = function(n) {
 
 describe('findIndex', () => {
   it('find first pair number', () => {
-    expect(findindex([1, 3, 4, 5], isPair)).toEqual(2); // TODO Your test instead
+    expect(findIndex([1, 3, 4, 5], isPair)).toEqual(2); // TODO Your test instead
   });
 
   it('return an -1 when not found', () => {
-    expect(findindex([1, 3, 5, 7], isPair)).toEqual(-1); // TODO Your test instead
+    expect(findIndex([1, 3, 5, 7], isPair)).toEqual(-1); // TODO Your test instead
   });
 })
