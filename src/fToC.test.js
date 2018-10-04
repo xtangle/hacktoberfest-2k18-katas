@@ -13,8 +13,8 @@ describe('fToC', () => {
     expect(fToC(-4)).toEqual(-20);
   });
 
-  it('returns an error', () => {
-    expect(fToC()).toThrow('ValidationError');
+  it('returns null', () => {
+    expect(fToC()).toEqual(null);
   });
 
 })
