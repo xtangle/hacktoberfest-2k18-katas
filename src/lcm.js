@@ -1,3 +1,3 @@
-export const takeWhile = () => {
+export const lcm = () => {
   // TO IMPLEMENT IN ANOTHER PR
 };

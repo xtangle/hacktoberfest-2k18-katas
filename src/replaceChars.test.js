@@ -7,7 +7,7 @@ describe('replaceChars', () => {
     expect(replaceChars("01234567", "a", "b")).toEqual("01234567");
   });
 
-  it('return null if input isn't string, () => {
+  it('return null if input isn\'t string', () => {
     expect(replaceChars()).toEqual(null);
     expect(replaceChars(123, "2", "4")).toEqual(null);
   });

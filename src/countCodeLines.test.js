@@ -22,7 +22,7 @@ describe('countCodeLines', () => {
 
     /*****
     * This is a snippet with 4 lines of code
-    *  \/* no nesting allowed!
+    *  /* no nesting allowed!
     //*****//***/// Slightly pathological comment ending...
 
     let familyRelation = subject => (
