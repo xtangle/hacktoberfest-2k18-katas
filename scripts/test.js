@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const { exec, spawnSync } = require('child_process');
-const { chain, filter } = require('lodash');
+const { chain, filter, map } = require('lodash');
 
 function seeChangedFiles(cb) {
   exec('git diff --name-status master', (err, out) => {
@@ -86,6 +86,16 @@ ${files
   // Find the file to test
   const testFileToRun = modifiedImplems[0].filename.replace('.', '.test.');
 
+  // Launch the linter
+  console.log(`\
+###################################
+##     LINTING YOUR CHANGES      ##
+###################################
+
+Running command: "eslint ${map(files, 'filename').join(' ')}"
+`);
+  const lintStatus = runCommand('node_modules/.bin/eslint', map(files, 'filename'));
+
   // Launch the tests
   console.log(`\
 ###################################
@@ -94,10 +104,10 @@ ${files
 
 Running command: "jest ${testFileToRun}"
 `);
-  const status = runCommand('node_modules/.bin/jest', [testFileToRun]);
+  const testStatus = runCommand('node_modules/.bin/jest', [testFileToRun]);
 
   // Exit with the same status as the tests
-  const actualStatus = shoudExitWithFailure ? 1 : status;
+  const actualStatus = shoudExitWithFailure ? 1 : lintStatus || testStatus;
   console.log('Exiting with status: ' + actualStatus);
   process.exit(actualStatus);
 });
