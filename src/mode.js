@@ -4,7 +4,7 @@ export const mode = (Numbers) => {
      var Modes;
      var ModeLength = 0;
     
-    for (i = 0; i < Numbers.length; i++) { 
+    for (var i = 0; i < Numbers.length; i++) { 
         
         var count = Numbers.filter((v) => (v === Numbers[i])).length;
         
