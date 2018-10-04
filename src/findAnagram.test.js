@@ -1,11 +1,11 @@
-import { findAnagarm } from "./findAnagram";
+import { findAnagram } from "./findAnagram";
 
-describe("findAnagarm", () => {
+describe("findAnagram", () => {
   test("returns dell and ledl", () => {
-    expect(findAnagarm(["dell", "ledl", "abc", "edcd"])).toEqual(["dell", "ledl"]);
+    expect(findAnagram(["dell", "ledl", "abc", "edcd"])).toEqual(["dell", "ledl"]);
   });
   
   test("returns dog and god", () => {
-    expect(findAnagarm(["bird", "dog", "fox", "god", "tiger"])).toEqual(["dog", "god"]);
+    expect(findAnagram(["bird", "dog", "fox", "god", "tiger"])).toEqual(["dog", "god"]);
   });
 })
