@@ -1,3 +1,1 @@
-export const slug = () => {
-  // TO IMPLEMENT IN ANOTHER PR
-};
+export const slug = str => str.trim().replace(/ /g, '_');
