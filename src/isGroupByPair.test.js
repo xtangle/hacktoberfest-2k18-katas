@@ -14,7 +14,7 @@ describe('isGroupByPair', () => {
   });
 
   it('Should return false', () => {
-    expect('{[()]}').toBe(false); // TODO Your test instead
+    expect('{}[])').toBe(false); // TODO Your test instead
   });
 
   it('Should return false', () => {
