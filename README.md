@@ -16,7 +16,7 @@ yarn
 
 1. Find an issue that is **not assigned** yet
 2. Implement it so that it passes both the linting and the tests (check with `yarn lint src/theFunction.js src/theNewKata.test.js` and `yarn test src/theFunction.test.js`)
-3. Add a test case for a new function. You can use `yarn generate` to create the two new files.
+3. Add a test case for a new function. You can use `yarn generate <function_name>` to create the two new files.
 4. Create your **Pull Request**
 5. Create an issue for your new feature
 
@@ -29,11 +29,9 @@ yarn
 
 ## Files
 
-When using `yarn generate`, two files are created.
+Running `yarn generate theFunction`, would generate the two following files.
 
 You only need to edit the **test file**, the actual implementation will be left to someone else!
-
-Running `yarn generate` and answering `theFunction` would generate:
 
 **theFunction.js**:
 
