@@ -4,5 +4,9 @@
  * It is given that all array elements are distinct.
  */
 export const kthSmallest = (array, k) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  if (k && array && array.length > 0) {
+    array.sort((a, b) => a - b);
+    return array[k - 1];
+  }
+  return null;
 };
