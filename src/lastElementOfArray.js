@@ -1,3 +1,3 @@
-export const lastElementOfArray = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const lastElementOfArray = (arr) => {
+  return arr[arr.length-1];
 };
