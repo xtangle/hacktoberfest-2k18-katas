@@ -1,3 +1,8 @@
-export const sortNames = () => {
-    // TO IMPLEMENT IN ANOTHER PR
-  };
+export const sortNames = (arr) => {
+  if(!Array.isArray(arr)){
+    return 0;
+  }
+
+  return arr.sort();
+
+};
