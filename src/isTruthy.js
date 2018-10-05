@@ -1,3 +1,3 @@
-export const isTruthy = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const isTruthy = (value) => {
+  return !!value;
 };
