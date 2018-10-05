@@ -8,7 +8,7 @@ describe('evalReversePolishNotation', () => {
   });
 
   it('basic multiplication', () => {
-    const result = evalReversePolishNotation('2  2 *');
+    const result = evalReversePolishNotation('2 2 *');
     
     expect(result).toEqual(4);
   });
