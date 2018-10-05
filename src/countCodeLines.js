@@ -8,49 +8,54 @@ export const countCodeLines = (codeString) => {
     return 0;
   nTotal = splitted.length;
   splitted.forEach((line, index) => {
-    if (line.trim() == '' || line.trim().startsWith('//')) {
-      // console.log(line.trim())
-      nCommentBlock += 1;
-    }
+
     if (line.includes('/*')) {
 
       if (line.trim().startsWith('/*')) {
         for (let i = index; i < splitted.length; i++) {
-          if (splitted[i].trim() == '' || splitted[i].trim().startsWith('//')) {
+          if ((splitted[i].trim() == '' || splitted[i].trim().startsWith('//')) && splitted[i].trim().includes('*/') == false) {
+            // // console.log('splitted[i].trim()', splitted[i].trim());
             nCommentBlock -= 1;
+            // return;
           }
+          // if (splitted[i].trim().includes('*/')) return;
           if (splitted[i].trim().endsWith('*/')) {
             nCommentBlock += 1;
-            break;
+            return;
           }
           nCommentBlock += 1;
           if (splitted[i].indexOf('*/') !== -1 && splitted[i].indexOf('*/') <= splitted[i].length - 2) {
             nCommentBlock += 1;
-            break;
+            return;
           }
         }
       } else {
-        for (let i = index + 1; i < splitted.length; i++) {
+        for (let i = index; i < splitted.length; i++) {
           if (splitted[i].trim() == '' || splitted[i].trim().startsWith('//')) {
             // console.log(splitted[i].trim())
             nCommentBlock -= 1;
+            return;
           }
           // console.log(splitted[i], splitted[i].length, splitted[i].indexOf('*/'), splitted[i].endsWith('*/'))
           if (splitted[i].trim().endsWith('*/')) {
             nCommentBlock += 1;
-            break;
+            return;
           }
-          // nCommentBlock += 1;
+          nCommentBlock += 1;
           if (splitted[i].indexOf('*/') !== -1 && splitted[i].indexOf('*/') <= splitted[i].length - 2) {
             nCommentBlock += 1;
-            break;
+            return;
           }
         }
       }
+    } else if (line.trim() == '' || line.trim().startsWith('//')) {
+      // console.log(line.trim())
+      nCommentBlock += 1;
+      return;
     }
 
   })
-  // console.log(nUnwanted, nTotal, nCommentBlock)
+  console.log(nUnwanted, nTotal, nCommentBlock)
   return (parseInt(nTotal - nCommentBlock));
 
 };
