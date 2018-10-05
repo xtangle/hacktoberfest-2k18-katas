@@ -1,3 +1,3 @@
 export const dummy = value => {
-  return value + 1;
+  return value;
 };
