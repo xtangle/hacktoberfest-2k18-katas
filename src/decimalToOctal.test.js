@@ -6,10 +6,10 @@ describe('decimalToOctal', () => {
   });
 
   it('throws error when passed non decimal value', () => {
-    expect(decimalToOctal(null)).toThrow();
+    expect(() => decimalToOctal(null)).toThrow();
   });
   it('throws error when passed non decimal value', () => {
-    expect(decimalToOctal('1223RandomString')).toThrow();
+    expect(() => decimalToOctal('1223RandomString')).toThrow();
   });
 
   it('return octal value of a number passed with a precision', () => {

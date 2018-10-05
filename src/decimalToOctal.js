@@ -1,3 +1,6 @@
-export const decimalToOctal = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const decimalToOctal = (number) => {
+  if (!number || isNaN(Number(number))) {
+    throw new Error();
+  }
+  return number.toString(8);
 };
