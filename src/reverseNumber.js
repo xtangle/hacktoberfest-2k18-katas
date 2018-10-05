@@ -3,10 +3,10 @@
  * 
  * @return number
  */
-export const reverseNumber = (number) => {
+export const reverseNumber = (n) => {
   const result = [];
   
-  number.toString().split('').forEach(item => {
+  n.toString().split('').forEach(item => {
     result.unshift(item)
   });
 
