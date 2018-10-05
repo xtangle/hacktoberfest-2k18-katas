@@ -29,7 +29,11 @@ yarn
 
 ## Files
 
-When using `yarn generate`, two files are created:
+When using `yarn generate`, two files are created.
+
+You only need to edit the **test file**, the actual implementation will be left to someone else!
+
+Running `yarn generate` and answering `theFunction` would generate:
 
 **theFunction.js**:
 
@@ -44,16 +48,36 @@ export const theFunction = () => {
 ```js
 import { theFunction } from './theFunction';
 
+/*
+ * Example of the assertions you can use for your tests:
+ *
+ * - Testing equality between the function's output and a constant:
+ * expect(theFunction()).toEqual(123);
+ *
+ * - Testing that the function returns null:
+ * expect(theFunction()).toBeNull();
+ *
+ * - Testing that the function returns a falsy value (eg. false, 0, "")
+ * expect(theFunction()).toBeFalsy();
+ *
+ * - Testing that the function returns a truthy value (eg. true, 1, "abc")
+ * expect(theFunction()).toBeTruthy();
+ *
+ * - Testing that the function throws
+ * expect(() => { theFunction(); }).toThrow();
+ */
+
 describe('theFunction', () => {
-  it('does something', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('theFunction does this thing...', () => {
+    // TODO Your own assertion here
   });
 
-  it('does something else', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('theFunction does that other thing...', () => {
+    // TODO Your own assertion here
   });
-})
+
+  it('theFunction does a very cool thing...', () => {
+    // TODO Your own assertion here
+  });
+});
 ```
-
-You only need to update the test file, the actual implementation will be done
-by someone else!
