@@ -33,18 +33,41 @@ export const ${name} = () => {
 
 function generateTestFile(name) {
   const filename = path.resolve(__dirname, `../src/${name}.test.js`);
-  const content = `
+  const content = `\
 import { ${name} } from './${name}';
 
+/*
+ * Example of the assertions you can use for your tests:
+ *
+ * - Testing equality between the function's output and a constant:
+ * expect(${name}()).toEqual(123);
+ *
+ * - Testing that the function returns null:
+ * expect(${name}()).toBeNull();
+ *
+ * - Testing that the function returns a falsy value (eg. false, 0, "")
+ * expect(${name}()).toBeFalsy();
+ *
+ * - Testing that the function returns a truthy value (eg. true, 1, "abc")
+ * expect(${name}()).toBeTruthy();
+ *
+ * - Testing that the function throws
+ * expect(() => { ${name}(); }).toThrow();
+ */
+
 describe('${name}', () => {
-  it('does something', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('${name} does this thing...', () => {
+    // TODO Your own assertion here
   });
 
-  it('does something else', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('${name} does that other thing...', () => {
+    // TODO Your own assertion here
   });
-})`.slice(1);
+
+  it('${name} does a very cool thing...', () => {
+    // TODO Your own assertion here
+  });
+});\n`;
 
   fs.writeFile(filename, content, function(err) {
     if (err) {
