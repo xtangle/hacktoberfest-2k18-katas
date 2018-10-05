@@ -1,3 +1,7 @@
-export const removeAllDuplicates = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const removeAllDuplicates = (array) => {
+  if (array && Array.isArray(array)) {
+    const set = new Set(array);
+    return [...set];
+  }
+  return null;
 };
