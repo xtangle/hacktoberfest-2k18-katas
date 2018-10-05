@@ -32,6 +32,6 @@ describe('countCodeLines', () => {
     console.log(familyRelation(subject))
   `
   it('counts the lines containing code in a messed up snippet', () => {
-    expect(countCodeLines).toEqual(5)
+    expect(countCodeLines(messedUpSnippet)).toEqual(5)
   });
-})
+});
