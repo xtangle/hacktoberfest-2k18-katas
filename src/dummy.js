@@ -1,3 +1,3 @@
-export const dummy = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const dummy = value => {
+  return value;
 };
