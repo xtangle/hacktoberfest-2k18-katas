@@ -1,3 +1,14 @@
+/*
+ * @param number
+ * 
+ * @return number
+ */
 export const reverseNumber = (n) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  const result = [];
+  
+  n.toString().split('').forEach(item => {
+    result.unshift(item)
+  });
+
+  return Number(result.join(''));
 };
