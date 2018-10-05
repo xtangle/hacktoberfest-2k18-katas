@@ -1,5 +1,7 @@
 ## Details
-**Link to the issue:** *link to the issue*
+**Issue you fixed:** *link to the issue*
+
+**Issue you added:** *link to the issue*
 
 **Name of the function you implemented**: *name of the function*
 
