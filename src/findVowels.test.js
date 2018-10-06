@@ -27,14 +27,14 @@ describe('findVowels', () => {
     });
 
     it('no vowels on string', () => {
-        expect(findVowels('Mmmm')).toEqual([]); 
+        expect(findVowels('Mmmm')).toEqual([]);
         expect(findVowels('Lvgvs')).toEqual([]);
     });
 
     it('invalid parameters', () => {
-        expect(findVowels(123)).toThrow();
-        expect(findVowels([])).toThrow();
-        expect(findVowels({})).toThrow(); 
-        expect(findVowels(null)).toThrow();
+        expect(() => findVowels(123)).toThrow();
+        expect(() => findVowels([])).toThrow();
+        expect(() => findVowels({})).toThrow();
+        expect(() => findVowels(null)).toThrow();
     });
 });
