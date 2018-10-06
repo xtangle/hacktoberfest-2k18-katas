@@ -1,3 +1,3 @@
-export const isRemainder = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const isRemainder = (remainder, dividend, divisor) => {
+  return dividend % divisor === remainder;
 };
