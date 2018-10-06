@@ -6,6 +6,7 @@ describe('alphabetizeString', () => {
     expect(alphabetizeString('10987654321')).toEqual('01123456789');
     expect(alphabetizeString('the quick brown fox jumped over the lazy dog')).toEqual('abcddeeeefghhijklmnoooopqrrttuuvwxyz');
     expect(alphabetizeString('abcdefghijklmnopqrstuvwxyz')).toEqual('abcdefghijklmnopqrstuvwxyz');
+    expect(alphabetizeString('!@#$%^&*()(*&^%$"')).toEqual('!"#$$%%&&(()**@^^');
   });
 
   it('fails on invalid parameters', () => {
