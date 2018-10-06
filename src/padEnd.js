@@ -1,3 +1,21 @@
 export const padEnd = (str, padLength, padString) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  let strWithPad = str;
+
+  if(typeof padLength != "number" || typeof str != "string"){
+    return null;
+  }
+
+  if(padString === undefined) {
+    padString = " ";
+  }
+
+  while(strWithPad.length < padLength){
+      strWithPad += padString;
+  }
+
+  if(strWithPad.length > padLength){
+    strWithPad = strWithPad.substr(0,padLength);
+  }
+
+  return strWithPad;
 };

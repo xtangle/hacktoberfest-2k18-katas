@@ -16,7 +16,7 @@ yarn
 
 1. Find an issue that is **not assigned** yet
 2. Implement it so that it passes both the linting and the tests (check with `yarn lint src/theFunction.js src/theNewKata.test.js` and `yarn test src/theFunction.test.js`)
-3. Add a test case for a new function. You can use `yarn generate` to create the two new files.
+3. Add a test case for a new function. You can use `yarn generate <function_name>` to create the two new files.
 4. Create your **Pull Request**
 5. Create an issue for your new feature
 
@@ -29,7 +29,9 @@ yarn
 
 ## Files
 
-When using `yarn generate`, two files are created:
+Running `yarn generate theFunction`, would generate the two following files.
+
+You only need to edit the **test file**, the actual implementation will be left to someone else!
 
 **theFunction.js**:
 
@@ -44,16 +46,36 @@ export const theFunction = () => {
 ```js
 import { theFunction } from './theFunction';
 
+/*
+ * Example of the assertions you can use for your tests:
+ *
+ * - Testing equality between the function's output and a constant:
+ * expect(theFunction()).toEqual(123);
+ *
+ * - Testing that the function returns null:
+ * expect(theFunction()).toBeNull();
+ *
+ * - Testing that the function returns a falsy value (eg. false, 0, "")
+ * expect(theFunction()).toBeFalsy();
+ *
+ * - Testing that the function returns a truthy value (eg. true, 1, "abc")
+ * expect(theFunction()).toBeTruthy();
+ *
+ * - Testing that the function throws
+ * expect(() => { theFunction(); }).toThrow();
+ */
+
 describe('theFunction', () => {
-  it('does something', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('theFunction does this thing...', () => {
+    // TODO Your own assertion here
   });
 
-  it('does something else', () => {
-    expect(true).toBeTruthy(); // TODO Your test instead
+  it('theFunction does that other thing...', () => {
+    // TODO Your own assertion here
   });
-})
+
+  it('theFunction does a very cool thing...', () => {
+    // TODO Your own assertion here
+  });
+});
 ```
-
-You only need to update the test file, the actual implementation will be done
-by someone else!
