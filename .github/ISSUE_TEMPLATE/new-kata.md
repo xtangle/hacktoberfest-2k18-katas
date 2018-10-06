@@ -25,6 +25,7 @@ If the function is complex enough to warrant a description, add it here...
 
 # If you want to take on this issue:
 
+- Check that the kata is labelled "up for grabs"
 - If no one is assigned to the issue, reply with `/request` to ask for it
 - Create a Pull Request with the 3 following changes:
   - A fixed implementation of the function (for example: `src/theFunction.js`)
