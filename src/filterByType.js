@@ -1,3 +1,7 @@
-export const filterByType = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const filterByType = (values, type) => {
+  if (values && type) {
+    return values.filter(value => typeof value === type);
+  } else {
+    return null;
+  }
 };
