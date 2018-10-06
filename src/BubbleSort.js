@@ -15,6 +15,5 @@ export const BubbleSort = numbers => {
       work = false;
     }
   }
-  console.log(sortedArray);
   return sortedArray;
 };
