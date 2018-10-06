@@ -23,10 +23,10 @@ const inquirer = require('inquirer');
 
 function generateMethodFile(name) {
   const filename = path.resolve(__dirname, `../src/${name}.js`);
-  const content = `
+  const content = `\
 export const ${name} = () => {
   // TO IMPLEMENT IN ANOTHER PR
-};`.slice(1);
+};\n`;
 
   fs.writeFile(filename, content, function(err) {
     if (err) {

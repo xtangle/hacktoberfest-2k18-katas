@@ -16,9 +16,9 @@ describe('tokenizer', () => {
     const tokens = [
       { type: 'number', lexeme: '10', literal: 10 },
       { type: 'plus', lexeme: '+', literal: null },
-      { type: 'number', lexeme: '10', literal: 20 },
+      { type: 'number', lexeme: '20', literal: 20 },
       { type: 'star', lexeme: '*', literal: null },
-      { type: 'number', lexeme: '10', literal: 5 },
+      { type: 'number', lexeme: '5', literal: 5 },
     ];
 
     expect(tokenizer(expression)).toEqual(tokens);
@@ -29,9 +29,9 @@ describe('tokenizer', () => {
     const tokens = [
       { type: 'number', lexeme: '10', literal: 10 },
       { type: 'plus', lexeme: '+', literal: null },
-      { type: 'number', lexeme: '10', literal: 20 },
+      { type: 'number', lexeme: '20', literal: 20 },
       { type: 'star', lexeme: '*', literal: null },
-      { type: 'number', lexeme: '10', literal: 5 },
+      { type: 'number', lexeme: '5', literal: 5 },
     ];
 
     expect(tokenizer(expression)).toEqual(tokens);
