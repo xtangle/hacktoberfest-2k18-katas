@@ -4,7 +4,11 @@ export const reverseArray = arr => {
   //returns null if the arg is not an array
   if (arr instanceof Array) {
     if(arr.length == 0) return "array"
-    return arr.reverse();
+    let reversed = [];
+    arr.forEach(function(el, i) {
+      reversed.push(arr[arr.length-i-1])
+    });
+    return reversed
   }
   return null;
 };
