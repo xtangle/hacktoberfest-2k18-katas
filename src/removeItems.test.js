@@ -11,7 +11,7 @@ describe('removeItems', () => {
     expect(removeItems(undefined)).toBeUndefined();
   });
 
-  it('removeItems to remove (1, 2, 3, 4, 5) from [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]', () => {
+  it('removes given items from the array(first argument)', () => {
     expect(removeItems([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1, 2, 3, 4, 5)).toEqual([6, 7, 8, 9, 10]);
     expect(removeItems(['Pete', 'Andrew', 'Michelle', 'Alex'], 'Andrew', 'Michelle')).toEqual(['Pete', 'Alex']);
   });
