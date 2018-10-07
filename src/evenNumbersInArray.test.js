@@ -34,4 +34,12 @@ describe('evenNumbersInArray', () => {
     }
     expect(oopsNoNumbers).toThrow();
   });
+
+  it('evenNumbersInArray should throw', () => {
+    function handleUndefined (){
+      evenNumbersInArray(undefined);
+    }
+    expect(handleUndefined).toThrow();
+  });
+
 });
