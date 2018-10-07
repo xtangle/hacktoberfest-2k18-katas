@@ -1,7 +1,11 @@
 export const arrayRightRotate = (arr, n) => {
-  // Rotate array elements from right to left n times.
-  // Example: array = [1, 2, 3, 4], n = 2;
-  // Steps: [1, 2, 3, 4] -> [4, 1, 2, 3] -> [3, 4, 1, 2]
-  // Result: [3, 4, 1, 2]
-  // Return null if passed element is not an array.
+    if(arr.constructor !== Array)
+        return null;
+    let len = arr.length;
+    n %= len;
+    for(let i=0; i<n; i++){
+        let n = arr.pop();
+        arr.unshift(n);
+    }
+    return arr;
 };
