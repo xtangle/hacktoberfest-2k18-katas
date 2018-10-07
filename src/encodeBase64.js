@@ -1,3 +1,3 @@
-export const encodeBase64 = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const encodeBase64 = (str) => {
+  return btoa(str);
 };
