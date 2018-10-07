@@ -21,16 +21,16 @@ import { evenNumbersInArray } from './evenNumbersInArray';
 
 describe('evenNumbersInArray', () => {
   it('evenNumbersInArray returns even number', () => {
-    expect(evenNumbersInArray([1,2,3,4,5,6])).toEqual([2,4,6])
+    expect(evenNumbersInArray([1,2,3,4,5,6])).toEqual([2,4,6]);
   });
 
   it('evenNumbersInArray returns an empty array', () => {
-    expect(evenNumbersInArray([1,3,5])).toEqual([])
+    expect(evenNumbersInArray([1,3,5])).toEqual([]);
   });
 
   it('evenNumbersInArray should throw', () => {
     function oopsNoNumbers (){
-      evenNumbersInArray(['foo', 'bar'])
+      evenNumbersInArray(['foo', 'bar']);
     }
     expect(oopsNoNumbers).toThrow();
   });
