@@ -21,7 +21,7 @@ import { switchLetters } from './switchLetters';
 
 describe('switchLetters', () => {
   it('switchLetters switches first and the last letter in the string', () => {
-    expect(switchLetters('hacktoberfest')).toEqual('tacktoberfesk');
+    expect(switchLetters('hacktoberfest')).toEqual('tacktoberfesh');
   });
 
   it('switchLetters detects multiple words in a string and switches their first and last letter places respectively', () => {
