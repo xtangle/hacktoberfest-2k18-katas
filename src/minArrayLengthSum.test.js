@@ -8,7 +8,7 @@ describe('minArrayLengthSum', () => {
     });
     
     it('throws error when total array sum is less then the summing factor', () => {
-        expect(minArrayLengthSum([2,3,1,2,4], 20)).toThrow();
+        expect(() => minArrayLengthSum([2,3,1,2,4], 20)).toThrow();
     });
 
     it('return the empty array if input is empty', () => {
@@ -16,8 +16,8 @@ describe('minArrayLengthSum', () => {
     });
 
     it('return the same array if suming factor not present', () => {
-        expect(minArrayLengthSum([2,3,1,2,4,3])).toStrictEqual([1, 2]);
-        expect(minArrayLengthSum([2,3,1,2,4,3], null)).toStrictEqual([1, 2]);
+        expect(minArrayLengthSum([2,3,1,2,4,3])).toStrictEqual([2, 3, 1, 2, 4, 3]);
+        expect(minArrayLengthSum([2,3,1,2,4,3], null)).toStrictEqual([2, 3, 1, 2, 4, 3]);
     });
 
     it('throws error when array is not a pure number array', () => {
