@@ -24,9 +24,9 @@ describe('centerText', () => {
     ],
     [
       ' A mad boxer shot a ',
-      ' quick, gloved jab  ',
-      ' to the jaw of his  ',
-      '   dizzy opponent   '
+      'quick, gloved jab to',
+      'the jaw of his dizzy',
+      '      opponent      '
     ]
   ]
 
@@ -34,5 +34,5 @@ describe('centerText', () => {
     it('Return proper texts', () => {
       expect(centerText(input[i].s, input[i].n)).toEqual(output[i])
     })
-  }  
+  }
 })
