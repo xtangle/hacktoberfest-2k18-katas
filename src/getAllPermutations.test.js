@@ -1,5 +1,4 @@
 import { getAllPermutations } from './getAllPermutations';
-import { permutation } from './getAllPermutation';
 
 describe('permutation', () => {
   it('works with numbers', () => {
