@@ -1,3 +1,3 @@
 export const wordCount = (phraseToSearch, wordToSearch) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  return phraseToSearch.split(wordToSearch).length - 1;
 };
