@@ -21,12 +21,12 @@ import { findLongestWord } from './findLongestWord';
 
 describe('findLongestWord', () => {
   it('findLongestWord returns the longest word in a set of words', () => {
-      expect(findLongestWord("sleepy depression sad").toEqual("depression"));
-      expect(findLongestWord("sleepy depression supercalifragilisticexpialidocious").toEqual("supercalifragilisticexpialidocious"));
+      expect(findLongestWord("sleepy depression sad")).toEqual("depression");
+      expect(findLongestWord("sleepy depression supercalifragilisticexpialidocious")).toEqual("supercalifragilisticexpialidocious");
   });
 
   it('findLongestWord returns the longest word if there is a tie', () => {
-      expect(findLongestWord("sleepy sleepy sad").toEqual("sleepy"));
-      expect(findLongestWord("sad sad sad").toEqual("sad"));
+      expect(findLongestWord("sleepy sleepy sad")).toEqual("sleepy");
+      expect(findLongestWord("sad sad sad")).toEqual("sad");
   });
 });
