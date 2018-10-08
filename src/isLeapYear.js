@@ -1,3 +1,8 @@
 export const isLeapYear = (year) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0)) {
+    return true;
+  } else {
+    return false;
+  }
+
 };
