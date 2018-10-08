@@ -33,7 +33,7 @@ export const ${name} = () => {
       return console.log(`Could not create the "${name}.js" file!`);
     }
 
-    console.log(`Succesfully the "${name}.js" file!`);
+    console.log(`Successfully created the "${name}.js" file!`);
   });
 }
 
@@ -80,6 +80,6 @@ describe('${name}', () => {
       return console.log(`Could not create the "${name}.test.js" file!`);
     }
 
-    console.log(`Succesfully the "${name}.test.js" file!`);
+    console.log(`Successfully created the "${name}.test.js" file!`);
   });
 }

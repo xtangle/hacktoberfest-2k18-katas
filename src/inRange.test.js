@@ -28,7 +28,10 @@ describe("inRange", () => {
     expect(inRange(0, 5, 10)).toBeFalsy();
   });
 
-  it("should be true", () => {
-    expect(inRange(5, 10)).toBeTruthy();
+  it("should throw", () => {
+    function testRange(){
+      inRange(5, 10)
+    }
+    expect(testRange).toThrow();
   });
 });

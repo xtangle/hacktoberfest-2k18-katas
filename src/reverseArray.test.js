@@ -6,16 +6,16 @@ describe("replaceChars", () => {
   });
 
   it("returns null if the arg is not an array", () => {
-    expect(reverseArray(1)).to.equal(null);
+    expect(reverseArray(1)).toEqual(null);
   });
   it("Returns the array given as an arg in reverse", () => {
-    expect(reverseArray([1, 2, 3])).to.eql([3, 2, 1]);
-    expect(reverseArray(["test", "TEST", "tEsT", "Test"])).to.eql([
+    expect(reverseArray([1, 2, 3])).toEqual([3, 2, 1]);
+    expect(reverseArray(["test", "TEST", "tEsT", "Test"])).toEqual([
       "Test",
       "tEsT",
       "TEST",
       "test"
     ]);
-    expect(reverseArray([3, "test"])).to.eql(["test", 3]);
+    expect(reverseArray([3, "test"])).toEqual(["test", 3]);
   });
 });
