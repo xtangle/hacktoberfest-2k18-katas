@@ -21,14 +21,14 @@ import { linearSearch } from './linearSearch';
 
 describe('linearSearch', () => {
   it('find index the given value form the collection or given array', () => {
-    expect(linearSearch([1, 3, 4, 5]), 5).toEqual('Found at index 3');
+    expect(linearSearch([1, 3, 4, 5], 5)).toEqual('Found at index 3');
   });
 
   it('Shoud return not found if the value not exits', () => {
-    expect(linearSearch([1, 3, 4, 5]), 6).toEqual('Not Found');
+    expect(linearSearch([1, 3, 4, 5], 6)).toEqual('Not Found');
   });
 
   it('Shoud return not found if the value not exits', () => {
-    expect(linearSearch([1, 2, 4, 5]), 2).toEqual('Found at index 1');
+    expect(linearSearch([1, 2, 4, 5], 2)).toEqual('Found at index 1');
   });
 });
