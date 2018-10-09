@@ -3,8 +3,8 @@ import { booleanExpressionEvaluator } from './booleanExpressionEvaluator';
 describe('booleanExpressionEvaluator', () => {
   it('return the evaulated result', () => {
     // simple expressions
-    expect(booleanExpressionEvaluator('!(true)')).toEqual(false);
-    expect(booleanExpressionEvaluator('!(false)')).toEqual(true);
+    expect(booleanExpressionEvaluator('!true')).toEqual(false);
+    expect(booleanExpressionEvaluator('!false')).toEqual(true);
     expect(booleanExpressionEvaluator('false & true')).toEqual(false);
     expect(booleanExpressionEvaluator('false & false')).toEqual(false);
     expect(booleanExpressionEvaluator('true & true')).toEqual(true);
@@ -15,7 +15,7 @@ describe('booleanExpressionEvaluator', () => {
     expect(booleanExpressionEvaluator('false ^ false')).toEqual(false);
     // complex expressions
     expect(booleanExpressionEvaluator('true & false | true')).toEqual(false);
-    expect(booleanExpressionEvaluator('true & !(false)')).toEqual(true);
+    expect(booleanExpressionEvaluator('true & !false')).toEqual(true);
     expect(booleanExpressionEvaluator('false ^ true')).toEqual(true);
     expect(booleanExpressionEvaluator('false ^ true | false')).toEqual(true);
     expect(booleanExpressionEvaluator('true ^ true | false')).toEqual(false);
