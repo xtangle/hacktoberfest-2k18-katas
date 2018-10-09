@@ -8,7 +8,7 @@ describe('occurrenceOfWord', () => {
   });
 
   it('should throw an error if the word does not exist', () => {
-    expect(occurrenceOfWord('This is this but this could be that. That is awesome.', '')).toThrow();
-    expect(occurrenceOfWord('This is this but this could be that. That is awesome.')).toThrow();
+    expect(() => occurrenceOfWord('This is this but this could be that. That is awesome.', '')).toThrow();
+    expect(() => occurrenceOfWord('This is this but this could be that. That is awesome.')).toThrow();
   });
 });
