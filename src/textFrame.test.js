@@ -21,7 +21,7 @@ Your task is to determine if it is possible to create text frame.
 `, () => {
 
 		it('should return true if letters match.', () => {
-      expect(textFrame("john", "wick", "jigsaw", "hijack")).toBeTruthy()
+      expect(textFrame("abcd", "bcad", "daad", "aaab")).toBeTruthy()
       expect(textFrame("loop", "loop", "pool", "pool")).toBeTruthy()
     });
     
