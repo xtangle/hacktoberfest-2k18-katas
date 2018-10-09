@@ -1,3 +1,3 @@
-export const toBaseNine = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const toBaseNine = dec => {
+  return parseInt(Number(dec).toString(9));
 };
