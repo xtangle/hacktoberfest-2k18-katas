@@ -13,22 +13,22 @@ export const isValidSchedule = (lessons) => {
   for (var i=0; i<numOfDays; i++) {
     var weekday = weekdays[i];
 	var dailyLessons = lessons.filter(function(d) {
-	  return d.day.includes(weekday);
+      return d.day.includes(weekday);
 	});
 	
 	// Step 2
 	dailyLessons.sort(function(lessonA, lessonB) { 
-	  return lessonA.timeBegin - lessonB.timeBegin;
+      return lessonA.timeBegin - lessonB.timeBegin;
 	});
 	
 	var numOfDailyLessons = dailyLessons.length;
 	
 	// Step 3
 	for (var j=0; j<numOfDailyLessons-1; j++) {
-	  if (dailyLessons[j].timeEnd >= dailyLessons[j+1].timeBegin) {
-		// Step 4
-	    return false;
-	  }
+      if (dailyLessons[j].timeEnd >= dailyLessons[j+1].timeBegin) {
+      // Step 4
+      return false;
+      }
 	}
   }
   return true;
