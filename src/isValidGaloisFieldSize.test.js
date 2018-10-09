@@ -23,15 +23,15 @@ describe('isValidGaloisFieldSize', () => {
   it('isValidGaloisFieldSize returns true for valid field size', () => {
     expect(isValidGaloisFieldSize(11)).toBeTruthy(); // 11^1
   });
-  
+
   it('isValidGaloisFieldSize returns false for invalid field size', () => {
     expect(isValidGaloisFieldSize(1)).toBeFalsy(); // 1 is not a prime
   });
-  
+
   it('isValidGaloisFieldSize returns false for invalid field size', () => {
     expect(isValidGaloisFieldSize(0)).toBeFalsy(); // 0 is not a prime
   });
-  
+
   it('isValidGaloisFieldSize returns false for invalid field size', () => {
     expect(isValidGaloisFieldSize(-1)).toBeFalsy(); // -1 is not a prime
   }); 
