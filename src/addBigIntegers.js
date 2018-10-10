@@ -16,7 +16,6 @@ export const addBigIntegers = (intString) => {
       topNum = curNum;
       bottomNum = topNum;
     } else {
-      topNum = topNum;
       bottomNum = curNum;
     }
 
