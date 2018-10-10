@@ -16,6 +16,6 @@ export const numberKeysInJSON = obj => {
   if (isObject(obj)) {
     return countKeys(obj) - 1;
   } else {
-    throw new Exception();
+    throw -1; // new Exception(); error in linter
   }
 };
