@@ -3,5 +3,15 @@
  */
 
 export const oneLineKeyboard = (str) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  const keyboard = [
+    /^[-0-9`=]*$/,
+    /^[[\]wetyuio-r]*$/,
+    /^[#asdf-hj-l;'\\:"|]*$/i,
+    /^[<zxcvbnm>,./?]*$/i,
+    /^ *$/
+  ]
+  for (const row of keyboard)
+    if(row.exec(str))
+      return true;
+  return false;
 };
