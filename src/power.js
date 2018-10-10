@@ -1,3 +1,3 @@
 export const power = (base, power) => {
-    Math.pow(base, power)
+    return Math.pow(base, power)
 };
