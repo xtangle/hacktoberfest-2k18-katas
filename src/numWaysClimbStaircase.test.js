@@ -1,10 +1,6 @@
 import { numWaysClimbStaircase } from "./numWaysClimbStaircase"
 
 describe('the staircase problem', () => {
-  it('counts the numbers of ways to climb the stairs with 0 steps', () => {
-    const result = numWaysClimbStaircase(0)
-    expect(result).toEqual(1)
-  })
   it('counts the numbers of ways to climb the stairs with 1 step', () => {
     const result = numWaysClimbStaircase(1)
     expect(result).toEqual(1)
