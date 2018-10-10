@@ -22,7 +22,7 @@ import { map } from './map';
 describe('map', () => {
   it('should return new array', () => {
     expect(map(['10', '10', '10'], parseInt)).toEqual([10, 10, 10]);
-    expect(map(['10', '10', '10'], parseInt)).toEqual([10, 10, 10]);
+    expect(map([2, 4, 6], i => i * 2)).toEqual([4, 8, 12]);
   });
 
   it('should throw error if callback is not function', () => {
