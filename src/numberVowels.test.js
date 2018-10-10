@@ -10,13 +10,13 @@ describe('numberVowels', () => {
   });
 
   it('should return an object listing the word with the most vowels and the number of vowels it has', () => {
-    expect(numberVowels('Hello, world!')).toBe({ most: 'Hello', number: 2 });
-    expect(numberVowels('yellow dolly')).toBe({ most: 'yellow', number: 2 });
-    expect(numberVowels('What number is just plain humongous?')).toBe({ most: 'humongous', number: 4 });
+    expect(numberVowels('Hello, world!')).toEqual({ most: 'Hello', number: 2 });
+    expect(numberVowels('yellow dolly')).toEqual({ most: 'yellow', number: 2 });
+    expect(numberVowels('What number is just plain humongous?')).toEqual({ most: 'humongous', number: 4 });
   });
 
   it('should, when multiple tie for the most vowels, return an object listing an array of the tied words and the number of vowels they have', () => {
-    expect(numberVowels('Hello, Thomas!')).toBe({ most: ['Hello', 'Thomas'], number: 2 });
-    expect(numberVowels('yellow dolly with a green handle')).toBe({ most: ['yellow', 'green', 'handle'], number: 2 });
+    expect(numberVowels('Hello, Thomas!')).toEqual({ most: ['Hello', 'Thomas'], number: 2 });
+    expect(numberVowels('yellow dolly with a green handle')).toEqual({ most: ['yellow', 'green', 'handle'], number: 2 });
   });
 });
