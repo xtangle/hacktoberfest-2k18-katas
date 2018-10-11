@@ -20,15 +20,15 @@ import { isValidAnagram } from './isValidAnagram';
  */
 
 describe('isValidAnagram', () => {
-  it('isValidAnagram does this thing...', () => {
-    // TODO Your own assertion here
+  it('Passed several valid cases.', () => {
+    expect(isValidAnagram("anagram", "nagaram")).toBeTruthy();
+    expect(isValidAnagram("cinema", "iceman")).toBeTruthy();
+    expect(isValidAnagram("apple", "pepla")).toBeTruthy();
   });
 
-  it('isValidAnagram does that other thing...', () => {
-    // TODO Your own assertion here
-  });
-
-  it('isValidAnagram does a very cool thing...', () => {
-    // TODO Your own assertion here
+  it('Passed several invalid cases. ', () => {
+    expect(isValidAnagram("rat", "cat")).toBeFalsy();
+    expect(isValidAnagram("pad", "dad")).toBeFalsy();
+    expect(isValidAnagram("apple", "eleen")).toBeFalsy();
   });
 });
