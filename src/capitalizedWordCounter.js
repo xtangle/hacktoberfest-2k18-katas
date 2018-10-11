@@ -1,3 +1,4 @@
-export const capitalizedWordCounter = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const capitalizedWordCounter = (str) => {
+  const firstLetters = str.split(' ').map(word => word[0]).join('');
+  return (firstLetters.match(/[A-Z]/g) || []).length;
 };
