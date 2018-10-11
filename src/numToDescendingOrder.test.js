@@ -21,11 +21,10 @@ import { numToDescendingOrder } from './numToDescendingOrder';
 
 describe('numToDescendingOrder', () => {
   it('return the numbers in descending order...', () => {
-  	expect(numToDescendingOrder(123)).toEqual(321);
-  	expect(numToDescendingOrder(111)).toEqual(111);
-  	expect(numToDescendingOrder(9)).toEqual(9);
-  	expect(numToDescendingOrder("96212")).toEqual(21269);
-
+    expect(numToDescendingOrder(123)).toEqual(321);
+    expect(numToDescendingOrder(111)).toEqual(111);
+    expect(numToDescendingOrder(9)).toEqual(9);
+    expect(numToDescendingOrder("96212")).toEqual(21269);
   });
 
   it('return null if the input is not a number...', () => {
@@ -33,5 +32,4 @@ describe('numToDescendingOrder', () => {
     expect(numToDescendingOrder(NaN)).toBeNull();
     expect(numToDescendingOrder(true)).toBeNull();
   });
-
 });
