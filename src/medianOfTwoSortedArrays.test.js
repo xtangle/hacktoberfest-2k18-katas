@@ -26,7 +26,7 @@ describe('medianOfTwoSortedArrays', () => {
   });
 
   it('computes the correct median of [1,2] and [3,4]', () => {
-    const result = medianOfTwoSortedArrays([1,2], [2,4])
+    const result = medianOfTwoSortedArrays([1,2], [3,4])
     expect(result).toEqual(2.5)  
   });
   
