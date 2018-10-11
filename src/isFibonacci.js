@@ -6,11 +6,11 @@ export const isFibonacci = (num) => {
   }
   var n = parseInt(num,10);
   if(!(Math.round(Number(n)) === n))
-  	return false;
+    return false;
 
   if(isSquare(5 * (n * n) + 4) || isSquare(5 * (n * n) - 4)) 
-  	return true;
+    return true;
   else
-  	return false;
-  
+    return false;
+
 };
