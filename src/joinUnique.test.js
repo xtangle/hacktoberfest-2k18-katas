@@ -15,9 +15,9 @@ describe('joinUnique', () => {
   });
 
   it('joins the values inside the array with their original order, but without duplicates', () => {
-    expect(joinUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])).toBe([1, 3, 2, 5, 4]);
-    expect(joinUnique([1, 3, 2], [1, [5]], [2, [4]])).toBe([1, 3, 2, [5], [4]]);
-    expect(joinUnique([1, 2, 3], [5, 2, 1])).toBe([1, 2, 3, 5]);
-    expect(joinUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])).toBe([1, 2, 3, 5, 4, 6, 7, 8]);
+    expect(joinUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])).toEqual([1, 3, 2, 5, 4]);
+    expect(joinUnique([1, 3, 2], [1, [5]], [2, [4]])).toEqual([1, 3, 2, [5], [4]]);
+    expect(joinUnique([1, 2, 3], [5, 2, 1])).toEqual([1, 2, 3, 5]);
+    expect(joinUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])).toEqual([1, 2, 3, 5, 4, 6, 7, 8]);
   });
 });
