@@ -17,6 +17,6 @@ describe('every', () => {
       count++
       return el > 2
     })).toBeFalsy()
-    expect(count).toEqual(2)
+    expect(count).toEqual(1)
   });
 });
