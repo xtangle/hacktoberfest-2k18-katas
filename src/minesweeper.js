@@ -1,4 +1,4 @@
-export const minsweeper = () => {
+export const minesweeper = () => {
   // TO IMPLEMENT IN ANOTHER PR
 
   /*  
