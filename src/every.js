@@ -1,3 +1,6 @@
 export const every = (arr, cb) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  for (var i = 0; i < arr.length; i++) {
+    if (!cb(arr[i])) return false;
+  }
+  return true;
 };
