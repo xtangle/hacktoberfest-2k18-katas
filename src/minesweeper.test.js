@@ -1,6 +1,6 @@
-import { minsweeper } from './minsweeper';
+import { minesweeper } from './minesweeper';
 
-describe('minsweeper', () => {
+describe('minesweeper', () => {
   it('generates a minesweeper board given a square matrix', () => {
     let matrix = [
       [true,false,false], 
@@ -14,7 +14,7 @@ describe('minsweeper', () => {
       [1,1,1]
     ];                 
 
-    expect(minsweeper(matrix)).toEqual(board);
+    expect(minesweeper(matrix)).toEqual(board);
   });
 
   it('generates minesweeper board correctly even if rows and colums are not equal', () => {
@@ -28,7 +28,7 @@ describe('minsweeper', () => {
       [0,0,0]
     ];
 
-    expect(minsweeper(matrix)).toEqual(board);
+    expect(minesweeper(matrix)).toEqual(board);
   });
 
   it('minsweeper does a very cool thing...', () => {
@@ -44,6 +44,6 @@ describe('minsweeper', () => {
       [2,3,2,2]
     ];
 
-    expect(minsweeper(matrix)).toEqual(board);
+    expect(minesweeper(matrix)).toEqual(board);
   });
 });
