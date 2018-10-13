@@ -1,7 +1,5 @@
 import { primelist } from './primelist.js';
 
-
-
 describe('primelist.js', () => {
   it('should check to see if ranges are valid', () => {
     expect(primelist("invalid number","invalid number")).toBe('invalid range');
