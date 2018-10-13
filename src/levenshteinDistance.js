@@ -1,3 +1,3 @@
-export const levenshteinDistance = (string, string) => {
+export const levenshteinDistance = (string, string2) => {
 
 };
