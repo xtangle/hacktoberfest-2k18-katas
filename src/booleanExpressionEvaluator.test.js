@@ -13,8 +13,9 @@ describe('booleanExpressionEvaluator', () => {
     expect(booleanExpressionEvaluator('false | false')).toEqual(false);
     expect(booleanExpressionEvaluator('true ^ true')).toEqual(false);
     expect(booleanExpressionEvaluator('false ^ false')).toEqual(false);
+
     // complex expressions
-    expect(booleanExpressionEvaluator('true & false | true')).toEqual(false);
+    expect(booleanExpressionEvaluator('true & false | true')).toEqual(true);
     expect(booleanExpressionEvaluator('true & !false')).toEqual(true);
     expect(booleanExpressionEvaluator('false ^ true')).toEqual(true);
     expect(booleanExpressionEvaluator('false ^ true | false')).toEqual(true);
