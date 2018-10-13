@@ -1,3 +1,3 @@
-export const twoSum = (arr, sum) => {
+export const twoSum = () => {
   // TO IMPLEMENT IN ANOTHER PR
 };
