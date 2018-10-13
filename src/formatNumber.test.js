@@ -33,7 +33,7 @@ describe('formatNumber', () => {
   });
 
   it('formatNumber does a very cool thing...', () => {
-  	expect(formatNumber("somthing")).toBeNull();
+  	expect(formatNumber("something")).toBeNull();
   	expect(formatNumber(null)).toBeNull();
   	expect(formatNumber(NaN)).toBeNull();
   });
