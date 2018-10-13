@@ -13,7 +13,7 @@ describe('deepCopyObject', () => {
 
     yourObj.subObj.key = "new value";
 
-    expect(yourObj.subObj.key).toEqual("new value")
+    expect(yourObj.subObj.key).toEqual("new value");
     expect(myObj.subObj.key).toEqual("value");
   });
 
