@@ -13,7 +13,7 @@ describe('calculateTrig', () => {
 		expect(calculateTrig('tan', 180)).toEqual(1.3386902103511544);
 	});
 
-	if('tan(0) is 0', () => {
+	it('tan(0) is 0', () => {
 		expect(calculateTrig('tan', 0)).toEqual(0);
 	});
 });
