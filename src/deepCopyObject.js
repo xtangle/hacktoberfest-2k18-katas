@@ -1,3 +1,3 @@
 export const deepCopyObject = (objToCopy) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  return JSON.parse(JSON.stringify(objToCopy));
 };
