@@ -1,3 +1,3 @@
-export const splitString = (stringsToSplit, delimiter) => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const splitString = (stringToSplit, delimiter) => {
+  return stringToSplit.split(delimiter);
 };
