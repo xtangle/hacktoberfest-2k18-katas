@@ -28,8 +28,8 @@ describe('formatNumber', () => {
 
   it('format the number separating thousands...', () => {
   	expect(formatNumber(512345)).toEqual("512,345");
-    expect(formatNumber(5123456)).toEqual("5,123,456");
-    expect(formatNumber(51234567)).toEqual("51,234,567");
+  	expect(formatNumber(5123456)).toEqual("5,123,456");
+  	expect(formatNumber(51234567)).toEqual("51,234,567");
   });
 
   it('format the number separating thousands...', () => {
