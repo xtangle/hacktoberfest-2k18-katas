@@ -29,6 +29,6 @@ describe('twoSum', () => {
   });
 
   it('twoSum does a very cool thing...', () => {
-    expect(twoSum([213, 42, 421, 412, 214, 4214, 76], 274)).toEqual([0, 6]);
+    expect(twoSum([213, 42, 421, 412, 214, 4214, 76], 289)).toEqual([0, 6]);
   });
 });
