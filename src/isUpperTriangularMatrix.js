@@ -1,3 +1,3 @@
-export const isSquareMatrix = (matrix) => {
+export const isUpperTriangularMatrix = matrix => {
     // implement me
 };
