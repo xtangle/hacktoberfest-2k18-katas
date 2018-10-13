@@ -20,19 +20,19 @@ import { formatNumber } from './formatNumber';
  */
 
 describe('formatNumber', () => {
-  it('format the number seperating thousands...', () => {
+  it('format the number separating thousands...', () => {
     expect(formatNumber(5010)).toEqual("5,010");
     expect(formatNumber(10111)).toEqual("10,111");
     expect(formatNumber(51234)).toEqual("51,234");
   });
 
-  it('format the number seperating thousands...', () => {
+  it('format the number separating thousands...', () => {
   	expect(formatNumber(512345)).toEqual("512,345");
     expect(formatNumber(5123456)).toEqual("5,123,456");
     expect(formatNumber(51234567)).toEqual("51,234,567");
   });
 
-  it('formatNumber does a very cool thing...', () => {
+  it('format the number separating thousands...', () => {
   	expect(formatNumber("something")).toBeNull();
   	expect(formatNumber(null)).toBeNull();
   	expect(formatNumber(NaN)).toBeNull();
