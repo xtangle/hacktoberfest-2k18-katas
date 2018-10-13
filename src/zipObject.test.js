@@ -6,7 +6,7 @@ describe('zipObject', () => {
       let values = [1, 2, 3]
       let result = {"a": 1, "b": 2, "c": 3}
 
-      expect(zipObject(matrix)).toEqual(result);
+      expect(zipObject(keys, values)).toEqual(result);
   });
 
   it('zipObject handles shorter value array', () => {
@@ -14,7 +14,7 @@ describe('zipObject', () => {
       let values = [1, 2]
       let result = {"a": 1, "b": 2, "c": undefined}
 
-      expect(zipObject(matrix)).toEqual(result);
+      expect(zipObject(keys, values)).toEqual(result);
   });
 
   it('zipObject handles longer value array', () => {
@@ -22,6 +22,6 @@ describe('zipObject', () => {
       let values = [1, 2, 3, 4]
       let result = {"a": 1, "b": 2, "c": 3}
 
-      expect(zipObject(matrix)).toEqual(result);
+      expect(zipObject(keys, values)).toEqual(result);
   });
 });
