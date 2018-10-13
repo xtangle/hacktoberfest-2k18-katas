@@ -1,3 +1,7 @@
 export const isSquareMatrix = (matrix) => {
-    // TO IMPLEMENT IN ANOTHER PRFF
+    if (!Array.isArray(matrix)) return false;
+    for (const row of matrix) {
+        if (!row || row.length !== matrix.length) return false;
+    }
+    return true;
 };
