@@ -1,34 +1,22 @@
 import { pointInTriangle } from './pointInTriangle';
 
-/*
- * Example of the assertions you can use for your tests:
- *
- * - Testing equality between the function's output and a constant:
- * expect(pointInTriangle()).toEqual(123);
- *
- * - Testing that the function returns null:
- * expect(pointInTriangle()).toBeNull();
- *
- * - Testing that the function returns a falsy value (eg. false, 0, "")
- * expect(pointInTriangle()).toBeFalsy();
- *
- * - Testing that the function returns a truthy value (eg. true, 1, "abc")
- * expect(pointInTriangle()).toBeTruthy();
- *
- * - Testing that the function throws
- * expect(() => { pointInTriangle(); }).toThrow();
- */
-
 describe('pointInTriangle', () => {
-  it('pointInTriangle does this thing...', () => {
-    // TODO Your own assertion here
+  let validTriangle = {x0: 1., y0: 1., x1: 3., y1: 2., x2: 2., y2: 3.};
+
+  it('tests if a point is in a triangle.', () => {
+    expect(pointInTriangle({x: 2., y: 2.}, validTriangle)).toStrictEqual(true);
+    expect(pointInTriangle({x: 1., y: 3.}, validTriangle)).toStrictEqual(false);
   });
 
-  it('pointInTriangle does that other thing...', () => {
-    // TODO Your own assertion here
+  it('throws if point is invalid', () => {
+    expect(() => pointInTriangle({x: 2.}, validTriangle)).toThrow();
+    expect(() => pointInTriangle({x: 2., y: NaN}, validTriangle)).toThrow();
+    expect(() => pointInTriangle(validTriangle)).toThrow();
   });
 
-  it('pointInTriangle does a very cool thing...', () => {
-    // TODO Your own assertion here
+  it('throws if triangle is invalid or degenerate', () => {
+    expect(() => pointInTriangle({x: 2., y: 2.})).toThrow();
+    expect(() => pointInTriangle({x: 2., y: 2.},{x0: 1., y0: 1.})).toThrow();
+    expect(() => pointInTriangle({x: 2., y: 2.},{x0: 1., y0: 1., x1: 2., y1: 2., x2: 3., y2: 3.})).toThrow();
   });
 });
