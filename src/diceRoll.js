@@ -1,3 +1,3 @@
-export const diceRoll = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const diceRoll = (numberOfSides) => {
+  return Math.ceil(Math.random() * numberOfSides);
 };
