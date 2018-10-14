@@ -29,6 +29,7 @@ function normalizePaths(paths, endNode) {
                     normal = false;
                 }
             } catch (e) {
+                console.error(e);
             }
         }
 
@@ -119,6 +120,6 @@ function dijkstra(graph) {
     }
 
     return findPathWithMinimalWeight(pathsWithWeight);
-};
+}
 
 exports.dijkstra = dijkstra;
