@@ -20,9 +20,9 @@ import { leastCommonMultiple } from './leastCommonMultiple';
  */
 
 describe('leastCommonMultiple', () => {
-  it('leastCommonMultiple for 4 and 6', () => leastCommonMultiple(4, 6)).toBe(12);
+  it('leastCommonMultiple for 4 and 6', () => expect(leastCommonMultiple(4, 6)).toBe(12));
 
-  it('leastCommonMultiple for 21 and 6.', () => leastCommonMultiple(21, 6)).toBe(42);
+  it('leastCommonMultiple for 21 and 6.', () => expect(leastCommonMultiple(21, 6)).toBe(42));
 
-  it('leastCommonMultiple for 424 and 242', () => leastCommonMultiple(424, 242)).toBe(51304);
+  it('leastCommonMultiple for 424 and 242', () => expect(leastCommonMultiple(424, 242)).toBe(51304));
 });
