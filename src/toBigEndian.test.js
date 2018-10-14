@@ -1,4 +1,4 @@
-import { toBigEndian } from './formatNumber';
+import { toBigEndian } from './toBigEndian';
 
 /*
  * Example of the assertions you can use for your tests:
