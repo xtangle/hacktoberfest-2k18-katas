@@ -1,3 +1,5 @@
-export const zipObject = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const zipObject = (keys, values) => {
+  const obj = {};
+  keys.forEach((key, index) => obj[key] = values[index]);
+  return obj;
 };
