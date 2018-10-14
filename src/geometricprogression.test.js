@@ -19,7 +19,7 @@ import { geometricprogression } from './geometricprogression';
  * expect(() => { geometricprogression(); }).toThrow();
  */
 
-describe.skip('geometricprogression', () => {
+describe('geometricprogression', () => {
   it('geometricprogression should return false', () => {
     const lists = [[1,2,3], [-1, -2, -3], [0, 1, 2], [1/3, 2/3, 1]];
     
@@ -31,7 +31,7 @@ describe.skip('geometricprogression', () => {
 
   });
 
-  it('geometricprogression does that other thing...', () => {
+  it('geometricprogression should return true', () => {
     const lists = [[81, 27, 9, 3, 1], [0.3, 0.6, 1.2], [-1, -2, -4]];
     
     lists.forEach(list => {
