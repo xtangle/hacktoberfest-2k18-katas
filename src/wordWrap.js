@@ -7,5 +7,24 @@
  */
 
 export const wordWrap = (input, lineLength) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  const words = input.split(' ');
+
+  return words.reduce((lines, word) => {
+    const currentLine = lines[lines.length - 1];
+
+    if (!currentLine) {
+      lines.push(word);
+      return lines;
+    }
+
+    const nextLineLength = currentLine.length + 1 + word.length;
+
+    if (nextLineLength <= lineLength) {
+      lines[lines.length - 1] = `${currentLine} ${word}`;
+    } else {
+      lines.push(word);
+    }
+
+    return lines;
+  }, []);
 };
