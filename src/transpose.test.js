@@ -2,9 +2,9 @@ import { transpose } from './transpose';
 
 describe('transpose', () => {
   it('should transpose a matrix', () => {
-    expect(transpose([[1, 2]])).toBe([[1], [2]]);
-    expect(transpose([[1, 2], [3, 4]])).toBe([[1, 3], [2, 4]]);
-    expect(transpose([[1, 2], [3, 4], [5, 6]])).toBe([[1, 3, 5], [2, 4, 6]]);
+    expect(transpose([[1, 2]])).toEqual([[1], [2]]);
+    expect(transpose([[1, 2], [3, 4]])).toEqual([[1, 3], [2, 4]]);
+    expect(transpose([[1, 2], [3, 4], [5, 6]])).toEqual([[1, 3, 5], [2, 4, 6]]);
   });
 
   it('should throw if the input is not an array of array(s)', () => {
