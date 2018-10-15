@@ -3,5 +3,5 @@
  * up the string.
  */
 export const lineCount = (text) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  return (typeof text === 'string' && text !== '') ? text.split('\n').length : 0;
 };
