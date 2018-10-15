@@ -1,13 +1,13 @@
 export const pointInTriangle = (point, triangle) => {
   if (isNaN(point.x) || isNaN(point.y)) {
     throw "Point coordinates are not numeric values";
-  };
+  }
 
   if (isNaN(triangle.x0) || isNaN(triangle.y0) ||
       isNaN(triangle.x1) || isNaN(triangle.y1) ||
       isNaN(triangle.x2) || isNaN(triangle.y1)) {
     throw "Triangle coordinates are not numeric values";
-  };
+  }
 
   const A = triangleArea({...triangle});
 
