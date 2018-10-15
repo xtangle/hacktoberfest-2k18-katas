@@ -1,12 +1,27 @@
 import { isPerfectNumber } from './isPerfectNumber';
 
-describe('isPerfectNumber', () => {
-  it('0 is not a perfect number (not a positive integer)', () => {
-     expect(isPerfectNumber(0)).toEqual(false);
-  });
+/*
+ * Example of the assertions you can use for your tests:
+ *
+ * - Testing equality between the function's output and a constant:
+ * expect(isPerfectNumber()).toEqual(123);
+ *
+ * - Testing that the function returns null:
+ * expect(isPerfectNumber()).toBeNull();
+ *
+ * - Testing that the function returns a falsy value (eg. false, 0, "")
+ * expect(isPerfectNumber()).toBeFalsy();
+ *
+ * - Testing that the function returns a truthy value (eg. true, 1, "abc")
+ * expect(isPerfectNumber()).toBeTruthy();
+ *
+ * - Testing that the function throws
+ * expect(() => { isPerfectNumber(); }).toThrow();
+ */
 
-  it('1.73 is not a perfect number (not a positive integer)', () => {
-     expect(isPerfectNumber(1.73)).toEqual(false);
+describe('isPerfectNumber', () => {
+  it('0 is not a perfect number', () => {
+    expect(isPerfectNumber(0)).toEqual(false);
   });
 
   it('2 is not a perfect number', () => {
@@ -17,28 +32,7 @@ describe('isPerfectNumber', () => {
     expect(isPerfectNumber(6)).toEqual(true);
   });
 
-  it('28 is a perfect number', () => {
-    expect(isPerfectNumber(28)).toEqual(true);
-  });
-
-  it('29 is not a perfect number', () => {
-    expect(isPerfectNumber(29)).toEqual(false);
-  });
-
-  it('495 is not a perfect number', () => {
-    expect(isPerfectNumber(495)).toEqual(false);
-  });
-
   it('496 is a perfect number', () => {
     expect(isPerfectNumber(496)).toEqual(true);
   });
-
-  it('33550336 is a perfect number', () => {
-    expect(isPerfectNumber(33550336)).toEqual(true);
-  });
-
-  it('8589869056 is a perfect number', () => {
-    expect(isPerfectNumber(8589869056)).toEqual(true);
-  });
-
 });
