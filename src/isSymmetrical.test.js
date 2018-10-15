@@ -20,19 +20,18 @@ import { isSymmetrical } from './isSymmetrical';
  */
 
 describe('isSymmetrical', () => {
-  it('isSymmetrical determines whether a number isSymmetrical or not...', () => {
-  	expect(isSymmetrical(1112111)).toBeTruthy();
-  	expect(isSymmetrical(12321)).toBeTruthy();
-  	expect(isSymmetrical(123456789)).toBeFalsy();
-  	expect(isSymmetrical(1112233878)).toBeFalsy();
-  	expect(isSymmetrical(33333)).toBeTruthy();
-  	expect(isSymmetrical(122221)).toBeTruthy();
-  });
-
-  it('isSymmetrical returns False when given Invalid Input...', () => {
-    expect(isSymmetrical(null)).toBeFalsy();
-    expect(isSymmetrical(NaN)).toBeFalsy();
-    expect(isSymmetrical("abc")).toBeFalsy();
-  });
-
+	it('isSymmetrical determines whether a number isSymmetrical or not...', () => {
+		expect(isSymmetrical(1112111)).toBeTruthy();
+		expect(isSymmetrical(12321)).toBeTruthy();
+		expect(isSymmetrical(123456789)).toBeFalsy();
+		expect(isSymmetrical(1112233878)).toBeFalsy();
+		expect(isSymmetrical(33333)).toBeTruthy();
+		expect(isSymmetrical(122221)).toBeTruthy();
+	});
+	
+	it('isSymmetrical returns False when given Invalid Input...', () => {
+		expect(isSymmetrical(null)).toBeFalsy();
+		expect(isSymmetrical(NaN)).toBeFalsy();
+		expect(isSymmetrical("abc")).toBeFalsy();
+	});
 });
