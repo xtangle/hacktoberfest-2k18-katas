@@ -21,10 +21,10 @@ import { stringRemix } from './stringRemix';
 
 describe('stringRemix', () => {
   it('stringRemix does this thing...', () => {
-  	expect(stringRemix("abc", [0, 2, 1])).toEqual("acd");
+  	expect(stringRemix("abc", [0, 2, 1])).toEqual("acb");
   	expect(stringRemix("abcdef", [0, 2, 1, 5, 3, 4])).toEqual("acbfde");
   	expect(stringRemix("hack", [3, 2, 1, 0])).toEqual("kcah");
-  	expect(stringRemix("tober", [4, 5, 0, 2, 1])).toEqual("ertbo");
+  	expect(stringRemix("tober", [3, 4, 0, 2, 1])).toEqual("ertbo");
   	expect(stringRemix("fest", [0, 1, 2, 3])).toEqual("fest");
   });
 
