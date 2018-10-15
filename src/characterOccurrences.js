@@ -1,3 +1,5 @@
 export const characterOccurrences = (str, char) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  let stringArray = str.split('');
+  let occurences = stringArray.filter(letter => letter === char);
+  return occurences.length
 };
