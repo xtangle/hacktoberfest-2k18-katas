@@ -18,7 +18,8 @@ L
 R
 L
 L
-U`)).toEqual("1 5");
+U`)).toEqual("1 4");
+// start 2 3 => D 2 4, D 2 5, R 3 5, L 2 5, R 3 5, L 2 5, L 1 5, U 1 4 => end 1 4
     expect(mazes(`6 6
 4 4
 0
@@ -29,7 +30,8 @@ R
 D
 L
 L
-L`)).toEqual("2 3");
+L`)).toEqual("1 3");
+// start 4 4 => L 3 4, U 3 3, U 3 2, R 4 2, D 4 3, L 3 3, L 2 3, L 1 3 => end
   });
 
   it("With boulders...", () => {

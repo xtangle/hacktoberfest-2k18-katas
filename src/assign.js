@@ -1,3 +1,8 @@
 export const assign = (target, ...sources) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  sources.forEach((source) => {
+    if (source) {
+      Object.keys(source).map(key => target[key] = source[key]);
+    }
+  });
+  return target;
 };
