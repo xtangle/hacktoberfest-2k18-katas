@@ -25,29 +25,29 @@ describe('circleOfCoordsAroundCenter', () => {
   const pythagoreanDistance = (a, b) => {
     const diffA = a.lat - b.lat;
     const difB = a.lon - b.lon;
-    return Math.sqrt(diffA * diffA + difB * difB);
-  };
+    return Math.sqrt(diffA * diffA - difB * difB);
+  }
 
   it('take in input an object with lat and lon and an integer n and returns an array of n lat-lon', () => {
     const result = circleOfCoordsAroundCenter(center, 1);
     expect(result).toEqual(expect.any(Array));
     expect(result.length).toEqual(1);
     expect(result[0].lat).toBeDefined();
-    expect(result[0].lon).toBeDefined();
+    expect(result[0].long).toBeDefined();
 
   });
 
   it('each element of the returned array is distant from the center by 1000', () => {
     const result = circleOfCoordsAroundCenter(center, 3);
     expect(result.length).toEqual(3);
-    result.forEach(point => expect(Math.round(pythagoreanDistance(center, point))).toEqual(1000));
+    result.forEach(point => expect(pythagoreanDistance(center, point)).toEqual(1000));
   });
 
   it('each element of the returned array is at the same distance from the center', () => {
     const result = circleOfCoordsAroundCenter(center, 2);
     expect(result.length).toEqual(2);
-    const firstDistance = Math.round(pythagoreanDistance(center, result[0]));
-    result.forEach(point => expect(Math.round(pythagoreanDistance(center, point))).toEqual(firstDistance));
+    const firstDistance = pythagoreanDistance(center, result[0]);
+    result.forEach(point => expect(pythagoreanDistance(center, point)).toEqual(firstDistance));
   });
 
 });
