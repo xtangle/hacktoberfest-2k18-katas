@@ -17,7 +17,7 @@ describe('dijkstra', () => {
                 },
             ],
             'startNode': 'A',
-            'endNode': 'B',
+            'endNode': 'C',
         }
         const shortestPath = ['A', 'B', 'C']
         expect(dijkstra(graph)).toEqual(shortestPath);
