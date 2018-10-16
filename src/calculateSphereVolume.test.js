@@ -21,16 +21,16 @@ import { calculateSphereVolume } from './calculateSphereVolume';
 
 describe('calculateSphereVolume', () => {
   it('calculates the correct volume of a sphere given its radius with mathematical correct rounding to 2 following digits', () => {
-    expect(calculateSphereVolume(1000)).toEqual(4188.79)
-    expect(calculateSphereVolume(20)).toEqual(83.78)
+    expect(calculateSphereVolume(1000)).toEqual(4188790204.79);
+    expect(calculateSphereVolume(20)).toEqual(33510.32);
   });
 
   it('returns an error if radius is negative', () => {
-    expect(calculateSphereVolume(-1).toEqual("Radius needs to be a positive number!"))
+    expect(calculateSphereVolume(-1)).toEqual("Radius needs to be a positive number!");
   });
 
   it('returns an error if radius is not a number', () => {
-    expect(calculateSphereVolume(NaN).toEqual("Radius needs to be a positive number!"))
-    expect(calculateSphereVolume("string").toEqual("Radius needs to be a positive number!"))
+    expect(calculateSphereVolume(NaN)).toEqual("Radius needs to be a positive number!");
+    expect(calculateSphereVolume("string")).toEqual("Radius needs to be a positive number!");
   });
 });
