@@ -1,10 +1,6 @@
 import { generateSeries } from './generateSeries';
 
 describe('generateSeries', () => {
-  it('should return a function', () => {
-    expect(typeof generateSeries(0, 1, jest.fn())).toBe('function');
-  });
-  
   it('should return a series based on the start value, length and generation function', () => {
     expect(generateSeries(1, 5, prev => prev + 1)).toStrictEqual([1, 2, 3, 4, 5]);
     expect(generateSeries(2, 4, prev => prev * prev)).toStrictEqual([2, 4, 16, 256]);
