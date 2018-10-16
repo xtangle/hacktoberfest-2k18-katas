@@ -1,20 +1,29 @@
+const _ = require('lodash');
+
+const isValidAccount = (account) => {
+  const regex = /^[a-zA-Z0-9_]+$/;
+  return account.length < 16 && regex.test(account);
+};
+
 export const twitterBlockMessageGenerator = (
   accountsToBlock,
   customMessage
 ) => {
-  // TO IMPLEMENT IN ANOTHER
+  if (_.isNil(customMessage)) throw 'Custom Message is missing';
 
-  // create a function which generates an array of
-  // objects containing a message
-  // to send to twitter accounts
-  // before blocking them
+  const twitterBlockMessages = [];
 
-  // customMessage is required and the returned object must contain
-  // the account name and customMessage
+  for (let i = 0; i < accountsToBlock.length; i++) {
+    const account = accountsToBlock[i];
+    if (isValidAccount(account)) {
+      twitterBlockMessages.push({
+        accountName: account,
+        message: customMessage
+      });
+    } else {
+      throw 'Invalid Account Name';
+    }
+  }
 
-  // twitter account names must be validated
-
-  // valid account names:
-  // - are no longer than 15 characters
-  // - can only contain alphnumeric characters (with the exception of underscores)
+  return twitterBlockMessages;
 };

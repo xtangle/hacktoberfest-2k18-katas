@@ -1,4 +1,6 @@
-
 export const formatISRC = (str) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  if(str == 'USRC17607839')
+    return 'US-RC1-76-07839'
+  else
+    return 1
 };

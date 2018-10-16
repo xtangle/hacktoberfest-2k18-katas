@@ -41,29 +41,29 @@ describe('twitterBlockMessageGenerator', () => {
       },
     ]
 
-    expect(test).toBe(passingValue)
+    expect(test).toEqual(passingValue)
   });
 
   it('twitterBlockMessageGenerator handles empty customMessage', () => {
-    const test = twitterBlockMessageGenerator(
-      ['bill', 'pikachu', 'Char_Mander1987']      
-    )
-
-    expect(() => test).toThrow()
+    expect(() => {
+      twitterBlockMessageGenerator(
+        ['bill', 'pikachu', 'Char_Mander1987']
+      );
+    }).toThrow('Custom Message is missing');
   });
 
   it('twitterBlockMessageGenerator handles invalid account names', () => {
-    const testOne = twitterBlockMessageGenerator(
-      ['bill!', 'pikachu', 'CharMander1987_'],
-      'You shouldn\'t see this'
-    )
-
-    const testTwo = twitterBlockMessageGenerator(
-      ['b@ll', 'pikachu@', 'CharMander!9&7_'],
-      'You shouldn\'t see this'
-    )
-
-    expect(() => testOne).toThrow()
-    expect(() => testTwo).toThrow()
+    expect(() => {
+      twitterBlockMessageGenerator(
+        ['bill!', 'pikachu', 'CharMander1987_'],
+        'You shouldn\'t see this'
+      );
+    }).toThrow('Invalid Account Name');
+    expect(() => {
+      twitterBlockMessageGenerator(
+        ['b@ll', 'pikachu@', 'CharMander!9&7_'],
+        'You shouldn\'t see this'
+      );
+    }).toThrow('Invalid Account Name');
   });
 });
