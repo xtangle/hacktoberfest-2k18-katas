@@ -36,10 +36,10 @@ describe('approximately', () => {
   it('should handle big margins', () => {
     const fn5000 = approximately(5000);
 
-    expect(fn5000(500000, 44999.99)).toEqual(false);
-    expect(fn5000(500000, 45000)).toEqual(true);
-    expect(fn5000(500000, 55000)).toEqual(true);
-    expect(fn5000(500000, 55000.01)).toEqual(false);
+    expect(fn5000(50000, 44999.99)).toEqual(false);
+    expect(fn5000(50000, 45000)).toEqual(true);
+    expect(fn5000(50000, 55000)).toEqual(true);
+    expect(fn5000(50000, 55000.01)).toEqual(false);
   });
 
   it('should throw given invalid margins', () => {
