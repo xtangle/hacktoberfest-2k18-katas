@@ -1,8 +1,4 @@
 export const fitFloat = (number, length) => {
-  // Exact fit
-  if (number.toString() === length) {
-    return number;
-  }
   // When the length is the index of the '.', there's not way to fit
   if (length === number.toString().indexOf('.') - 1) {
     throw new Error('Impossible to fit');
@@ -12,10 +8,6 @@ export const fitFloat = (number, length) => {
   if (roundedInt < length) {
     throw new Error('Impossible to fit');
   }
-  // Exact rounded fit
-  if (roundedInt.toString().length === length) {
-    return roundedInt;
-  }
-
-
+  const spaceToFit = length - roundedInt.toString().length - 1;
+  return spaceToFit > 0 ? number.toFixed(spaceToFit) : Math.round(number).toString();
 };
