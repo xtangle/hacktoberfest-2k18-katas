@@ -8,7 +8,7 @@ export const lisp = (expr) => {
   };
   var parseExpr = /\(([a-z]+)\s+(\d+)(?:\s+(\d+))?\)/g;
   var match = null;
-  while(match = parseExpr.exec(expr)) {
+  while((match = parseExpr.exec(expr)) != null) {
     parseExpr.lastIndex = 0;
     var func = funcs[match[1]];
     var result = func(+match[2], +match[3]);
