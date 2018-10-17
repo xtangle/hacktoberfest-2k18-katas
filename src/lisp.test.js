@@ -26,22 +26,22 @@ describe('lisp', () => {
   });
 
   it('Handles a simple addition', () => {
-    expect(lisp("(add 9 128)").toEqual(137))
+    expect(lisp("(add 9 128)")).toEqual(137)
   });
 
   it('Handles a simple subtraction', () => {
-    expect(lisp("(sub 1337 40)").toEqual(1297))
+    expect(lisp("(sub 1337 40)")).toEqual(1297)
   });
-  
+
   it('Handles a simple multiplication', () => {
-    expect(lisp("(mul 9 13)").toEqual(117))
+    expect(lisp("(mul 9 13)")).toEqual(117)
   });
-  
+
   it('Handles a simple square root', () => {
-    expect(lisp("(sqrt 144)").toEqual(12))
+    expect(lisp("(sqrt 144)")).toEqual(12)
   });
-  
+
   it('Handles a more complex expression', () => {
-    expect(lisp("(sqrt (add (sqrt (mul 25 (div 18 2))) (sub 12345678 12345677)))").toEqual(4))
+    expect(lisp("(sqrt (add (sqrt (mul 25 (div 18 2))) (sub 12345678 12345677)))")).toEqual(4)
   });
 });
