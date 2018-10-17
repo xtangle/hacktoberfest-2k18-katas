@@ -1,6 +1,14 @@
-//a function which repeats the given string 'str' exactly 'n' times
-export const stringRepeat = (str, n) => {
-	if(typeof str !== "string" || typeof n !== "number" || n%1 !== 0 || isNaN(n))
-		throw "The parameters are not of the expected type"
-	return str.repeat(n)
+export const stringRepeat = (string, number) => {
+  if (typeof string !== 'string' || !Number.isInteger(number) || number < 0) {
+    throw 'type or value not permitted'
+  }
+  let result;
+  result = '';
+
+  let i;
+  for(i = 0; i < number; i++) {
+    result = result + string;
+  }
+
+  return result;
 };

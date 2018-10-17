@@ -1,0 +1,1 @@
+export const asciiToChar = (ascii) => String.fromCharCode(ascii);

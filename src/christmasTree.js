@@ -12,4 +12,20 @@ export const christmasTree = (level) => {
   //   I
 
   // If no level is provided the function should throw an error
+
+  if (!level || level <= 1){
+    throw "No level provided";
+  }
+
+  var tree = '';
+  var blanks = '';
+  for (var row = 0; row < level; row++){
+    blanks = ' '.repeat(level - (row + 1));
+    tree += blanks + 'X'.repeat((2 * (row + 1)) - 1) + blanks + "\n";
+  }
+
+  blanks = ' '.repeat(level - 1);
+  tree += blanks + 'I' + blanks + "\n";
+
+  return tree;
 };

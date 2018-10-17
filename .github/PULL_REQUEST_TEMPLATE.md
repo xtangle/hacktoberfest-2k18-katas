@@ -1,11 +1,12 @@
 ## Details
-**Issue you fixed:** *link to the issue*
+**Issue you fixed:** #XXX
 
-**Issue you added:** *link to the issue*
+**Issue you added:** #YYY
 
-**Name of the function you implemented**: *name of the function*
+**Name of the function you implemented**: foobar
 
-**Name of the function you added test cases for**: *name of the new function*
+**Name of the function you added test cases for**: barbaz
+
 
 ## Checklist (won't be merged if they are not all ticked)
 - [ ] I have asked for this issue, and was assigned it

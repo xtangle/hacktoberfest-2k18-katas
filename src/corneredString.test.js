@@ -2,9 +2,9 @@ import { corneredString } from './corneredString';
 
 describe('corneredString', () => {
   it('should space the string properly', () => {
-    expect(corneredString('yolo').toBe(
+    expect(corneredString('yolo')).toBe(
       `Y O L O\n\nO\n\nL\n\nO`
-    ));
+    );
   });
 
   it('should not error on empty string', () => {
@@ -18,6 +18,6 @@ describe('corneredString', () => {
   });
 
   it('should handle tiny strings', () => {
-    expect(corneredString('a').toBe('A'));
+    expect(corneredString('a')).toBe('A');
   });
 });

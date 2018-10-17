@@ -1,0 +1,1 @@
+export const pythagorean = (x,y) => Math.sqrt(x * x + y * y);
