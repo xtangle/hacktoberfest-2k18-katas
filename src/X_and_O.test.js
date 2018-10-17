@@ -20,7 +20,7 @@ import { X_and_O } from './X_and_O';
  */
 
 describe('X_and_O', () => {
-	it('X_and_O takes a string and checks if it has the same number of 'x's and 'o's...', () => {
+	it('X_and_O takes a string and checks if it has the same number of "x"s and "o"s...', () => {
 		expect(X_and_O('xxoo')).toBeTruthy();
 		expect(X_and_O('xxooo')).toBeFalsy();
 		expect(X_and_O('xoxoxoxoo')).toBeFalsy();
