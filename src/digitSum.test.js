@@ -8,7 +8,7 @@ describe('digitSum', () => {
     expect(digitSum(123)).toEqual(6)
   });
   it('digitSum does this thing...', () => {
-    expect(digitSum(99999)).toEqual(9)
+    expect(digitSum(99999)).toEqual(45)
   });
   it('digitSum does this thing...', () => {
     expect(digitSum(4)).toEqual(4)
