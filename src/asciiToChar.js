@@ -1,3 +1,1 @@
-export const asciiToChar = () => {
-  // TO IMPLEMENT IN ANOTHER PR
-};
+export const asciiToChar = (ascii) => String.fromCharCode(ascii);
