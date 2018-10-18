@@ -1,3 +1,3 @@
-export const chunkString = (input) => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const chunkString = (input, size) => {
+  return typeof input === 'string' ? input.match(new RegExp(`.{1,${size}}`, 'g')) : undefined;
 };
