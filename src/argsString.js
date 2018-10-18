@@ -1,3 +1,4 @@
-export const argsString = (message, varArgs) => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const argsString = (message, args) => {
+  let i = 0;
+  return message.replace(/\{\}/g, () => args[i++]);
 };
