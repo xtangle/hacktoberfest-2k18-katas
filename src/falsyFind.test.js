@@ -18,10 +18,10 @@ describe('falsyFind', () => {
   });
 
   it('predicate is mandatory', () => {
-    expect(falsyFind('hello world')).toThrow();
+    expect(() => falsyFind('hello world')).toThrow();
   });
 
   it('predicate should be a function', () => {
-    expect(falsyFind('hello world', NaN)).toThrow();
+    expect(() => falsyFind('hello world', NaN)).toThrow();
   });
 });
