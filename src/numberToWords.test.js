@@ -3,8 +3,6 @@ import { numberToWords } from './numberToWords';
 describe('numberToWords', () => {
   it('numberToWords converts numbers to words', () => {
     expect(numberToWords(123)).toEqual('one hundred and twenty three');
-    expect(numberToWords(105)).toEqual('one hundred and five');
-    expect(numberToWords(240)).toEqual('two hundred and forty');
     expect(numberToWords(42)).toEqual('forty two');
     expect(numberToWords(999)).toEqual('nine hundred and ninety nine');
     expect(numberToWords(1)).toEqual('one');
