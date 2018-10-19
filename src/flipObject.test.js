@@ -8,7 +8,7 @@ describe('flipObject', () => {
 
 	it('Return false, if argument is not an object', () => {
 		expect(flipObject('oouch')).toBeFalsy();
-		expect(flipObject(null).toBeFalsy());
+		expect(flipObject(null)).toBeFalsy());
 	});
 
 	it('Return false, if values cannot be converted to keys', () => {
