@@ -1,4 +1,4 @@
-export const getNthUglyNumber = (n) => {
+export const uglyNumber = (n) => {
   if(isNaN(n)){
     throw `${n} is NOT a number`;
   }
