@@ -1,12 +1,17 @@
 import { throwError } from "rxjs";
 
 export const getBroadcastIp = (addr) => {
+  // Input
+  var addr = '123.456.789.10/11';
   // Output
   var broadcastAddr = [];
 
   // Validate IP address format.
-  // var regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-  // var invalidIP = new Error('Invalid IP Address!')
+  var regex = new RegExp("^0*?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.0*?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.0*?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.0*?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/0*?(3[0-1]|[0-2]\\d)$");
+  var invalidIP = new Error('Invalid IP Address!');
+  if (addr.match(regex) == null) {
+      throw invalidIP
+  }
 
   // Seperate IP addr and mask.
   var mask = addr.substring(addr.indexOf('/') + 1);
@@ -37,11 +42,6 @@ export const getBroadcastIp = (addr) => {
       broadcastAddr[i] = parseInt(broadcastAddr[i],2);
   }
 
-  // debug
-  // console.log('IP Address: ' + ip.join('.'));
-  // console.log('Subnet Mask: ' + mask.join('.'));
-  // console.log('Broadcast Address: ' + broadcastAddr.join('.'))
-
   // Supporting functions
   function createBinaryString (nMask) {
     // nMask must be between -2147483648 and 2147483647
@@ -49,6 +49,6 @@ export const getBroadcastIp = (addr) => {
          nFlag++, sMask += String(nShifted >>> 31), nShifted <<= 1);
     return sMask;
   }
-
-  return broadcastIP
+  
+  return broadcastAddr.join('.')
 };
