@@ -24,11 +24,11 @@ describe('arrayToUpperCase', () => {
 
   it('arrayToUpperCase - array is not strictly composed of strings', () => {
     let arrayIn = [1, 'Bcc', 'aaa'];
-    expect(arrayToUpperCase(arrayIn)).toThrow();
+    expect(() => arrayToUpperCase(arrayIn)).toThrow();
   });
 
   it('arrayToUpperCase - parameter is not an array', () => {
-    expect(arrayToUpperCase(123)).toThrow();
-    expect(arrayToUpperCase('a')).toThrow();
+    expect(() => arrayToUpperCase(123)).toThrow();
+    expect(() => arrayToUpperCase('a')).toThrow();
   });
 });
