@@ -20,7 +20,7 @@ import { moonPhaseCalc } from './moonPhaseCalc';
  */
 
 describe('moonPhaseCalc', () => {
-  it('Tells you the phase of the moon based on date (mmddyyyy)', () => {
+  it('Tells you the phase of the moon based on date (ddmmyyyy)', () => {
     // TODO Your own assertion here
     expect(moonPhaseCalc('10182018')).toEqual('Waxing Gibbous');
     expect(moonPhaseCalc('12252018')).toEqual('Waning Gibbous');
