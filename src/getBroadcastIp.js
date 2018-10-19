@@ -1,8 +1,6 @@
 import { throwError } from "rxjs";
 
 export const getBroadcastIp = (addr) => {
-  // Input
-  var addr = '123.456.789.10/11';
   // Output
   var broadcastAddr = [];
 
@@ -18,16 +16,16 @@ export const getBroadcastIp = (addr) => {
   var ip = addr.substring(0, (addr.indexOf('/') + 1)-1).split('.');
 
   // Generate decimal mask
-  numMask = Number(mask);
+  var numMask = Number(mask);
   mask = '';
-  for (i=0; i<numMask; i++) {
+  for (var i=0; i<numMask; i++) {
     mask = mask + '1';
   }
   while (mask.length < 32) {
     mask = mask + '0';
   }
   var start = mask;
-  var mask = [];
+  mask = [];
   mask[0] = start.substring(0,8);
   mask[1] = start.substring(8,16);
   mask[2] = start.substring(16,24);
