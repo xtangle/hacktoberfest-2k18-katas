@@ -9,7 +9,7 @@ export const getInterval = (range, step = 1) => {
     throw('Check range definition.');
   }
 
-  const regex = /[\[\(]|[\]\)]|\s/gi; // regex matches brackets and whitespace characters
+  const regex = /[[(]|[)]]|\s/gi; // regex matches brackets and whitespace characters
   const [start, end] = range.replace(regex, '')
     .split(',')
     .map((n) => parseInt(n, 10));
