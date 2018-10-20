@@ -1,14 +1,9 @@
-const findSquare = (length, n = 1) => {
-  if (n*n >= length) {
-    return n;
-  }
-  return findSquare(length, n+1);
-};
+const findSquare = (length, n = 1) => (n*n >= length) ? n : findSquare(length, n+1);
 
 const assembleMatrix = (name, root) => {
- const matrixCol = [...Array(root)].map((_, i) => i);
- return matrixCol.map(
-   (_, rowIndex, _arr) =>  matrixCol.map((_, colIndex) => {
+ const matrixSize = [...Array(root)].map((_, i) => i);
+ return matrixSize.map(
+   (_, rowIndex, _arr) =>  matrixSize.map((_, colIndex) => {
       const indexLength = colIndex + rowIndex * _arr.length;
       return (indexLength < name.length)
         ? name[indexLength]
@@ -17,7 +12,11 @@ const assembleMatrix = (name, root) => {
   );
 }
 
-export const nameMatrix = (name) => {
-  const square = findSquare(name.length);
-  return assembleMatrix(name, square);
+const nameMatrix = (name) => {
+  const squareSize = findSquare(name.length);
+  return assembleMatrix(name, squareSize);
 };
+
+console.log(nameMatrix('Elie'))
+console.log(nameMatrix('Hacktoberfest'))
+console.log(nameMatrix('Samir'))
