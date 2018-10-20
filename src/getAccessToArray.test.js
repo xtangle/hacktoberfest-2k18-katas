@@ -2,7 +2,7 @@ import { getAccessToArray } from './getAccessToArray';
 
 describe('getAccessToArray', () => {
     function SafeVector(initValues = []) {
-        const array = initValues; // <-- you need to get a reference to this array
+        const array = initValues;
         this.store = (index, value) => array[index] = value;
         this.push = (val) => array.push(val);
         this.get = (index) => array[index];
