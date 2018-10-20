@@ -2,7 +2,6 @@ import { elementsDeletion } from './elementsDeletion';
 
 describe('elementsDeletion', () => {
   it('returns the number of element deletions required', () => {
-    console.log()
     expect(elementsDeletion([1, 2, 3, 4], [4, 1, 2])).toEqual(1);
   });
 
