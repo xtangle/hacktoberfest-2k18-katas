@@ -1,3 +1,3 @@
-export const arrayToUpperCase = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const arrayToUpperCase = (arrayIn) => {
+  return arrayIn.map((item) => item.toUpperCase());
 };
