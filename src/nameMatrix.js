@@ -12,11 +12,7 @@ const assembleMatrix = (name, root) => {
   );
 }
 
-const nameMatrix = (name) => {
+export const nameMatrix = (name) => {
   const squareSize = findSquare(name.length);
   return assembleMatrix(name, squareSize);
 };
-
-console.log(nameMatrix('Elie'))
-console.log(nameMatrix('Hacktoberfest'))
-console.log(nameMatrix('Samir'))
