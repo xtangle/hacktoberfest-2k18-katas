@@ -1,3 +1,11 @@
-export const allOfConditions = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const allOfConditions = (...args) => {
+  const conditions = args
+  return (input) => conditions.reduce((previousValue, checkCondition) => {
+    if(!previousValue) {
+      return false
+    }
+
+    return checkCondition(input)
+
+  }, true)
 };
