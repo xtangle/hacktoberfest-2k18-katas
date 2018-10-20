@@ -12,7 +12,6 @@ export const elementsDeletion = (arg1, arg2) => {
   else {
     if (typeof arg1 === 'string' && typeof arg2 === 'string') {
       for (let i=0; i < arg1.length; i++) {
-        console.log(arg1.charAt(i))
         let indexOfFirst = arg2.indexOf(arg1.charAt(i));
         if (indexOfFirst === -1) {
           numberDeleted++
