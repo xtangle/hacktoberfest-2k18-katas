@@ -1,3 +1,3 @@
-export const calculateRectangleAreas = () => {
-  // TO IMPLEMENT IN ANOTHER PR
+export const calculateRectangleAreas = (elements) => {
+  return elements.map(element=> element.reduce((a,b) => a*b));
 }
