@@ -1,8 +1,7 @@
 export const getNextLeapYear = (year) => {
   if(year == null)
     return null
-  else if(typeof year.getMonth === 'function')
-  {
+  if(typeof year.getMonth === 'function') {
     var currentYear = year.getFullYear()+1;
     while (true) {
       if(currentYear%4==0) {
@@ -14,8 +13,8 @@ export const getNextLeapYear = (year) => {
         }
         currentYear++
       } 
+    }
   }
-  else {
      if(!isNaN(parseFloat(n)) && !isNaN(n - 0)) {
         var currentYear=year+1;
         while (true) {
@@ -28,8 +27,8 @@ export const getNextLeapYear = (year) => {
           }
           currentYear++
         }
-        }
+       }
      }
-  }
+  
    return null;
 };
