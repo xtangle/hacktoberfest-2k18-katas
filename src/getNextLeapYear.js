@@ -30,6 +30,4 @@ export const getNextLeapYear = (year) => {
     }
     else
       return null;
-  
-   
 };
