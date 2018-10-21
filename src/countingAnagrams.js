@@ -1,7 +1,4 @@
 export const countingAnagrams = (str) => {
-  // TO IMPLEMENT IN ANOTHER PR
-};
-export const countingAnagrams = (str) => {
     var count = 0;
     var i = 0;
     str = str.split(/\s+/);
