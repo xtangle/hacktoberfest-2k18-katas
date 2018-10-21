@@ -2,11 +2,11 @@ import { unusedNumbers } from './unusedNumbers'
 describe('unusedNumbers', () => {
   it('should return unused digits', () => {
     expect(unusedNumbers(12, 34, 56, 78)).toBe('09')
-    expect(2015, 8, 26).toBe('3479')
-    expect(276, 575).toBe('013489')
-    expect(643).toBe('0125789')
-    expect(864, 896, 744).toBe('01235')
-    expect(364, 500, 71).toBe('289')
+    expect(unusedNumbers(2015, 8, 26)).toBe('3479')
+    expect(unusedNumbers(276, 575)).toBe('013489')
+    expect(unusedNumbers(643)).toBe('0125789')
+    expect(unusedNumbers(864, 896, 744)).toBe('01235')
+    expect(unusedNumbers(364, 500, 71)).toBe('289')
   })
 
   it('works with any number of arguments', () => {
