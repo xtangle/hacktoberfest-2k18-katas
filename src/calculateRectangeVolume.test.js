@@ -21,16 +21,16 @@ import { calculateRectangeVolume } from './calculateRectangeVolume';
 
 describe('calculateRectangeVolume', () => {
   it('calculateRectangeVolume throws error', () => {
-    expect(() => { calculateRectangleAreas()}).toThrow();
-    expect(() => { calculateRectangleAreas({})}).toThrow();
-    expect(() => {calculateRectangleAreas(1)}).toThrow();
-    expect(() => {calculateRectangleAreas('asdfasd')}).toThrow();
-    expect(() => {calculateRectangleAreas([12, 3, 6])}).toThrow();
+    expect(() => { calculateRectangeVolume()}).toThrow();
+    expect(() => { calculateRectangeVolume({})}).toThrow();
+    expect(() => {calculateRectangeVolume(1)}).toThrow();
+    expect(() => {calculateRectangeVolume('asdfasd')}).toThrow();
+    expect(() => {calculateRectangeVolume([12, 3, 6])}).toThrow();
   });
 
   it('calculates all the rectangle volume in a set of 2 dimention array', () => {
-    expect(calculateRectangleAreas([[1, 2, 3]])).toEqual([6]);
-    expect(calculateRectangleAreas([[3,4,1], [8, 10,1]])).toEqual([12, 80]);
-    expect(calculateRectangleAreas([[1,2,1], [4, 2, 1], [8, 18, 1], [12, 5, 1]])).toEqual([2, 8, 144, 60]);
+    expect(calculateRectangeVolume([[1, 2, 3]])).toEqual([6]);
+    expect(calculateRectangeVolume([[3,4,1], [8, 10,1]])).toEqual([12, 80]);
+    expect(calculateRectangeVolume([[1,2,1], [4, 2, 1], [8, 18, 1], [12, 5, 1]])).toEqual([2, 8, 144, 60]);
   });
 });
