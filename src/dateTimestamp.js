@@ -1,3 +1,5 @@
 export const dateTimestamp = (date) => {
-  // TO IMPLEMENT IN ANOTHER PR
+  const dt = new Date(date);
+  if (!(dt instanceof Date) || isNaN(dt)) throw new Error('Invalid date');
+  return dt.getTime();
 };
