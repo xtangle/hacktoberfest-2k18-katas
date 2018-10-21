@@ -30,10 +30,10 @@ describe('isAutomorphic', () => {
   });
 
   it('Check test...', () => {
-    expect(() => isAutomorphic(1)).toEqual('Automorphic');
-    expect(() => isAutomorphic(9)).toEqual('Not automorphic');
-    expect(() => isAutomorphic(625)).toEqual('Automorphic');
-    expect(() => isAutomorphic(25)).toEqual('Automorphic');
-    expect(() => isAutomorphic(53)).toEqual('Not automorphic');
+    expect(isAutomorphic(1)).toEqual('Automorphic');
+    expect(isAutomorphic(9)).toEqual('Not automorphic');
+    expect(isAutomorphic(625)).toEqual('Automorphic');
+    expect(isAutomorphic(25)).toEqual('Automorphic');
+    expect(isAutomorphic(53)).toEqual('Not automorphic');
   });
 });
