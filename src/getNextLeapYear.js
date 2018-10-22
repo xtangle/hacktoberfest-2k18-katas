@@ -1,8 +1,9 @@
 export const getNextLeapYear = (year) => {
   if(year == null)
     return null
+  var currentYear = 1;
   if(Object.prototype.toString.call(d) === "[object Date]") {
-    var currentYear = year.getFullYear()+1;
+    currentYear = year.getFullYear()+1;
     while (true) {
       if(currentYear%4==0) {
         if(currentYear%100!=0) {
