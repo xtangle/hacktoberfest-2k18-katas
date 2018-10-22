@@ -1,7 +1,5 @@
 import { syncAsync } from './syncAsync';
 
-var s;
-
 const createAsyncTask = (name, log = []) => {
     let resolver;
 
