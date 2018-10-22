@@ -21,21 +21,21 @@ import { pangram } from './pangram';
 
 describe('pangram valid', () => {
   it('should be correct', () => {
-    expect(panagram('A quick brown fox jumps over the lazy dog')).toEqual(true)
+    expect(pangram('A quick brown fox jumps over the lazy dog')).toEqual(true)
   });
 
   it('should be incorrect', () => {
-    expect(panagram('I always believed it was the things you don\'t choose that makes you who you are')).toEqual(false)
+    expect(pangram('I always believed it was the things you don\'t choose that makes you who you are')).toEqual(false)
   });
 
   it('should pass second test', () => {
-    expect(panagram('Sphinx of black quartz, judge my vow.')).toEqual(true)
+    expect(pangram('Sphinx of black quartz, judge my vow.')).toEqual(true)
   });
 });
 
 describe('pangram invalid args', () => {
   it('should throw error w/ null arg', () => {
-    expect(panagram(null)).toThrow()
-    expect(panagram()).toThrow()
+    expect(pangram(null)).toThrow()
+    expect(pangram()).toThrow()
   });
 });
