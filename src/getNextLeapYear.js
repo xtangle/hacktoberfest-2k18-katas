@@ -17,7 +17,7 @@ export const getNextLeapYear = (year) => {
     }
   }
      if(!isNaN(value) && parseInt(Number(value)) == value && !isNaN(parseInt(value, 10))) {
-        var currentYear=year+1;
+        currentYear=year+1;
         while (true) {
 			if(currentYear%4==0) {
 			  if(currentYear%100!=0) {
