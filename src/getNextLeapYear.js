@@ -2,7 +2,7 @@ export const getNextLeapYear = (year) => {
   if(year == null)
     return null
   var currentYear = 1;
-  if(Object.prototype.toString.call(d) === "[object Date]") {
+  if(Object.prototype.toString.call(year) === "[object Date]") {
     currentYear = year.getFullYear()+1;
     while (true) {
       if(currentYear%4==0) {
@@ -16,7 +16,7 @@ export const getNextLeapYear = (year) => {
       currentYear++	  
     }
   }
-     if(!isNaN(value) && parseInt(Number(value)) == value && !isNaN(parseInt(value, 10))) {
+     if(!isNaN(year) && parseInt(Number(year)) == year && !isNaN(parseInt(year, 10))) {
         currentYear=year+1;
         while (true) {
 			if(currentYear%4==0) {
