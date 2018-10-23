@@ -1,6 +1,6 @@
 export const isIPAddress = (input) => {
-	if(input == null) return False;
-	if(!(typeof input === 'string' || input instanceof String)) return False;
+	if(input == null) return false;
+	if(!(typeof input === 'string' || input instanceof String)) return false;
 	var i;
 	var s="";
 	var count=0;
@@ -9,26 +9,26 @@ export const isIPAddress = (input) => {
 		count++;
 		if(s.length>0) {
 			if(s.charAt(0)==0&&s.length>1)
-				return False;
+				return false;
 			else if(!(parseInt(s)>=0 && parseInt(s)<=255))
-				return False;
+				return false;
 		}
 		else
-			return False;
+			return false;
 	}
 	else if((input.charAt(i)>='0'&&input.charAt(i)<='9'))
 		s+=input.charAt(i);
 		else
-			return False;
+			return false;
 	}
 	if(count!=3)
-	return False;
+	return false;
 	if(s.length>0) {
 		if(s.charAt(0)==0&&s.length>1)
-			return False;
+			return false;
 		else if(!(parseInt(s)>=0 && parseInt(s)<=255))
-			return False;
+			return false;
 	}
-	else return False;
-	return True;
+	else return false;
+	return true;
 }
