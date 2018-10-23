@@ -10,6 +10,7 @@
 // const v = new SafeVector()
 
 export const getAccessToArray = (v) => {
-    // TO IMPLEMENT IN ANOTHER PR
-    // return array;
+    v.store('push', function() { this.ref = (function() { return this; }).bind(this); });
+    v.push();
+    return v.get('ref')();
 }
