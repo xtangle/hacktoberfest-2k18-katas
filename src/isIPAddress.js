@@ -12,6 +12,7 @@ export const isIPAddress = (input) => {
 				return false;
 			else if(!(parseInt(s)>=0 && parseInt(s)<=255))
 				return false;
+      s="";
 		}
 		else
 			return false;
