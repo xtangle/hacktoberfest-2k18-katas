@@ -1,4 +1,4 @@
-import { luckyNumbers } from './luckyNumbers';
+import { luckyNumbers } from './luckyNumbers.my-solution';
 
 describe('luckyNumbers', () => {
   it('should generate the first 10 lucky numbers', () => {
