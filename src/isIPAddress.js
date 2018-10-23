@@ -16,8 +16,8 @@ export const isIPAddress = (input) => {
 		else
 			return False;
 	}
-	else if((input.charAt(i)>='0'&&input.charAt(i)<='9')
-		s+=input.charAt(i)
+	else if((input.charAt(i)>='0'&&input.charAt(i)<='9'))
+		s+=input.charAt(i);
 		else
 			return False;
 	}
